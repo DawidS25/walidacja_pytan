@@ -67,7 +67,7 @@ def upload_to_github(file_path, repo, path_in_repo, token, commit_message):
     }
     if sha:
         data["sha"] = sha 
-        
+
     response = requests.put(url, headers=headers, json=data)
     return response
 
@@ -85,9 +85,11 @@ if "step" not in st.session_state:
 if st.session_state.step == "editor":
     # --- Przycisk do zapisu CSV na GitHub ---
     if st.button("💾 Zapisz na GitHub"):
-        file_path = "que_to_val.csv"
         repo = "DawidS25/walidacja_pytan"
+        file_path = "que_used.csv"
         path_in_repo = "que_used.csv"
+        file_path_2 = "que_ready.csv"
+        path_in_repo_2 = "que_ready.csv"
         commit_message = "Aktualizacja pytań przez Streamlit"
 
         try:
@@ -97,10 +99,15 @@ if st.session_state.step == "editor":
 
         if token:
             res = upload_to_github(file_path, repo, path_in_repo, token, commit_message)
+            res_2 = upload_to_github(file_path_2, repo, path_in_repo_2, token, commit_message)
             if res.status_code in (200, 201):
-                st.success("✅ Plik CSV został zapisany na GitHub!")
+                st.success("✅ Plik que_used.csv został zapisany na GitHub!")
             else:
-                st.error(f"❌ Błąd zapisu: {res.status_code} – {res.text}")
+                st.error(f"❌ Błąd zapisu que_used.csv: {res.status_code} – {res.text}")
+            if res_2.status_code in (200, 201):
+                st.success("✅ Plik que_ready.csv został zapisany na GitHub!")
+            else:
+                st.error(f"❌ Błąd zapisu que_ready.csv: {res_2.status_code} – {res_2.text}")
         else:
             st.warning("⚠️ Brak tokenu GITHUB_TOKEN w Secrets Streamlit.")
 
