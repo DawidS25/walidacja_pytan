@@ -58,13 +58,16 @@ def upload_to_github(file_path, repo, path_in_repo, token, commit_message):
         "Authorization": f"token {token}",
         "Accept": "application/vnd.github.v3+json"
     }
-
+    res_get = requests.get(url, headers=headers)
+    sha = res_get.json().get("sha") if res_get.status_code == 200 else None
     data = {
         "message": commit_message,
         "content": b64_content,
         "branch": "main"
     }
-
+    if sha:
+        data["sha"] = sha 
+        
     response = requests.put(url, headers=headers, json=data)
     return response
 
