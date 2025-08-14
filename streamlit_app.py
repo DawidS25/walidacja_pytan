@@ -111,9 +111,6 @@ if st.session_state.step == "editor":
         else:
             st.warning("⚠️ Brak tokenu GITHUB_TOKEN w Secrets Streamlit.")
 
-
-
-
     df_all = pd.read_csv('que_to_val.csv', sep=';')
     df_used = pd.read_csv('que_used.csv', sep=';')
     df_to_val = df_all[~df_all["id"].isin(df_used["id"])]
@@ -151,8 +148,12 @@ if st.session_state.step == "editor":
         ]
         if "edited_row" not in st.session_state:
             st.session_state.edited_row = edited_row
+        else:
+            st.session_state.edited_row = edited_row
         row_to_import = f"{edited_row[0]}000;{edited_row[1]};{edited_row[2]};{edited_row[3]};{edited_row[4]}"
         if "row_to_import" not in st.session_state:
+            st.session_state.row_to_import = row_to_import
+        else:
             st.session_state.row_to_import = row_to_import
         st.session_state.step = "walidacja"
         st.rerun()
