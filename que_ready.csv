@@ -1,3 +1,8 @@
 id;text;category;left;right
 fun001;Czy Twoje oczy czasem otwierają się wcześniej niż reszta ciała?;Śmieszne;NIE;TAK
 pik001;Czy Twoje życie intymne to dla Ciebie luźny temat?;Pikantne;NIE;TAK
+wol001;Wolisz ciepłe dni czy chłodne wieczory?;Wolisz;CIEPŁE DNI;CHŁODNE WIECZORY
+wol002;Wolisz chodzić na siłownię czy biegać na świeżym powietrzu?;Wolisz;SIŁOWNIA;ŚWIEŻE POWIETRZE
+pre001;Jak bardzo lubiłeś spędzać czas na podwórku?;Przeszłość;NIE LUBIŁEM;LUBIŁEM
+pik002;Czy inicjujesz zbliżenia częściej niż Twój partner?;Pikantne;NIE;TAK
+wol003;Wolisz nosić okulary czy soczewki kontaktowe?;Wolisz;OKULARY;SOCZEWKI
