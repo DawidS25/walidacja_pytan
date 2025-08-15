@@ -352,27 +352,6 @@ elif st.session_state.step == "new_que":
         with open("que_new.csv", "a", encoding="utf-8") as f:
             f.write("\n" + st.session_state.new_que.strip())
         st.success("✅ Plik que_new.csv został zapisany lokalnie!")
-    if st.button("💾 Dopisz te pytania do github"):
-        repo = "DawidS25/walidacja_pytan"
-        file_path = "que_new.csv"
-        path_in_repo = "que_new.csv"
-        commit_message = "Nowe pytania do walidacji"
-
-        try:
-            token = st.secrets["GITHUB_TOKEN"]
-        except Exception:
-            token = None
-
-        if token:
-            res = upload_to_github(file_path, repo, path_in_repo, token, commit_message)
-            if res.status_code in (200, 201):
-                st.success("✅ Plik que_new.csv został nadpisany na GitHub!")
-                st.rerun()
-            else:
-                st.error(f"❌ Błąd zapisu que_new.csv: {res.status_code} – {res.text}")
-        else:
-            st.warning("⚠️ Brak tokenu GITHUB_TOKEN w Secrets Streamlit.")
-
     if st.button("Powrót"):
         st.session_state.step = "new_que_edit"
         st.rerun()
