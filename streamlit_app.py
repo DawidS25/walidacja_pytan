@@ -340,7 +340,6 @@ elif st.session_state.step == "new_que":
                 st.error(f"❌ Błąd zapisu que_used.csv: {res.status_code} – {res.text}")
         else:
             st.warning("⚠️ Brak tokenu GITHUB_TOKEN w Secrets Streamlit.")
-        st.session_state.step = "new_que_edit"
 
     if st.button("Powrót"):
         st.session_state.step = "new_que_edit"
