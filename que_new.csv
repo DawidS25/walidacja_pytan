@@ -1,6 +1,5 @@
 id;text;category;left;right
-wol001;Wolisz ciepłe dni czy chłodne wieczory?;Wolisz;CIEPŁE DNI;CHŁODNE WIECZORY
-wol002;Wolisz chodzić na siłownię czy biegać na świeżym powietrzu?;Wolisz;SIŁOWNIA;ŚWIEŻE POWIETRZE
+swi006;Czy uważasz, że edukacja powinna być całkowicie darmowa?;Światopoglądowe;NIE;TAK
 
 swi005;Czy uważasz, że każdy powinien mieć prawo do zmiany zawodu w każdym wieku?;Światopoglądowe;NIE;TAK
 wol004;Wolisz oglądać filmy w kinie czy w domu?;Wolisz;W KINIE;W DOMU
