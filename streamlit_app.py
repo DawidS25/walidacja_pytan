@@ -218,7 +218,9 @@ elif st.session_state.step == "walidacja":
 
 
 elif st.session_state.step == "new_que_edit":
-
+    df_to_val = pd.read_csv('que_new.csv', sep=';')
+    df_new_ready = pd.read_csv('que_new_ready.csv', sep=';')
+    
     col1, col2 = st.columns(2)
     with col1:
         if st.button("💾 Zapisz na GitHub"):
@@ -251,9 +253,6 @@ elif st.session_state.step == "new_que_edit":
         if st.button("Dodaj nowe pytania"):
             st.session_state.step = "new_que"
             st.rerun()
-
-    df_to_val = pd.read_csv('que_new.csv', sep=';')
-    df_new_ready = pd.read_csv('que_new_ready.csv', sep=';')
 
     if len(df_to_val) <= 0:
         st.info("🎉 Wszystkie pytania zostały już zwalidowane!")  
