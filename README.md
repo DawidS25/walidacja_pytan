@@ -1,0 +1,1 @@
+# walidacja pytań
