@@ -138,6 +138,7 @@ if st.session_state.step == "editor":
             st.session_state.left,
             st.session_state.right
         ]
+        row = edited_row
         if "edited_row" not in st.session_state:
             st.session_state.edited_row = edited_row
         else:
