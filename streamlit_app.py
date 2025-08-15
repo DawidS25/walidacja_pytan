@@ -251,6 +251,9 @@ elif st.session_state.step == "new_que_edit":
 
     if len(df_to_val) <= 0:
         st.info("🎉 Wszystkie pytania zostały już zwalidowane!")
+        if st.button("Dodaj nowe pytania"):
+            st.session_state.step = "new_que"
+            st.rerun()        
         if st.button("Powrót"):
             if "row" in st.session_state:
                 del st.session_state.row
