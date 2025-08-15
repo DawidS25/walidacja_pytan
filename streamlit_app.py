@@ -219,41 +219,44 @@ elif st.session_state.step == "walidacja":
 
 elif st.session_state.step == "new_que_edit":
 
-    if st.button("💾 Zapisz na GitHub"):
-        repo = "DawidS25/walidacja_pytan"
-        file_path = "que_new.csv"
-        path_in_repo = "que_new.csv"
-        file_path_2 = "que_new_ready.csv"
-        path_in_repo_2 = "que_new_ready.csv"
-        commit_message = "Aktualizacja pytań przez Streamlit"
+    col1, col2 = st.columns(2)
+    with col1:
+        if st.button("💾 Zapisz na GitHub"):
+            repo = "DawidS25/walidacja_pytan"
+            file_path = "que_new.csv"
+            path_in_repo = "que_new.csv"
+            file_path_2 = "que_new_ready.csv"
+            path_in_repo_2 = "que_new_ready.csv"
+            commit_message = "Aktualizacja pytań przez Streamlit"
 
-        try:
-            token = st.secrets["GITHUB_TOKEN"]
-        except Exception:
-            token = None
+            try:
+                token = st.secrets["GITHUB_TOKEN"]
+            except Exception:
+                token = None
 
-        if token:
-            res = upload_to_github(file_path, repo, path_in_repo, token, commit_message)
-            res_2 = upload_to_github(file_path_2, repo, path_in_repo_2, token, commit_message)
-            if res.status_code in (200, 201):
-                st.success("✅ Plik que_new.csv został zapisany na GitHub!")
+            if token:
+                res = upload_to_github(file_path, repo, path_in_repo, token, commit_message)
+                res_2 = upload_to_github(file_path_2, repo, path_in_repo_2, token, commit_message)
+                if res.status_code in (200, 201):
+                    st.success("✅ Plik que_new.csv został zapisany na GitHub!")
+                else:
+                    st.error(f"❌ Błąd zapisu que_new.csv: {res.status_code} – {res.text}")
+                if res_2.status_code in (200, 201):
+                    st.success("✅ Plik que_new_ready.csv został zapisany na GitHub!")
+                else:
+                    st.error(f"❌ Błąd zapisu que_new_ready.csv: {res_2.status_code} – {res_2.text}")
             else:
-                st.error(f"❌ Błąd zapisu que_new.csv: {res.status_code} – {res.text}")
-            if res_2.status_code in (200, 201):
-                st.success("✅ Plik que_new_ready.csv został zapisany na GitHub!")
-            else:
-                st.error(f"❌ Błąd zapisu que_new_ready.csv: {res_2.status_code} – {res_2.text}")
-        else:
-            st.warning("⚠️ Brak tokenu GITHUB_TOKEN w Secrets Streamlit.")
+                st.warning("⚠️ Brak tokenu GITHUB_TOKEN w Secrets Streamlit.")
+    with col2:
+        if st.button("Dodaj nowe pytania"):
+            st.session_state.step = "new_que"
+            st.rerun()
 
     df_to_val = pd.read_csv('que_new.csv', sep=';')
     df_new_ready = pd.read_csv('que_new_ready.csv', sep=';')
 
     if len(df_to_val) <= 0:
-        st.info("🎉 Wszystkie pytania zostały już zwalidowane!")
-        if st.button("Dodaj nowe pytania"):
-            st.session_state.step = "new_que"
-            st.rerun()        
+        st.info("🎉 Wszystkie pytania zostały już zwalidowane!")  
         if st.button("Powrót"):
             if "row" in st.session_state:
                 del st.session_state.row
@@ -304,9 +307,6 @@ elif st.session_state.step == "new_que_edit":
         if "row_to_import" in st.session_state:
             del st.session_state.row_to_import
         st.session_state.step = "new_que_edit"
-        st.rerun()
-    if st.button("Dodaj nowe pytania"):
-        st.session_state.step = "new_que"
         st.rerun()
     if st.button("Powrót"):
         if "row" in st.session_state:
