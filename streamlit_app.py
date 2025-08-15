@@ -220,7 +220,7 @@ elif st.session_state.step == "walidacja":
 elif st.session_state.step == "new_que_edit":
     df_to_val = pd.read_csv('que_new.csv', sep=';')
     df_new_ready = pd.read_csv('que_new_ready.csv', sep=';')
-    
+
     col1, col2 = st.columns(2)
     with col1:
         if st.button("💾 Zapisz na GitHub"):
@@ -255,7 +255,7 @@ elif st.session_state.step == "new_que_edit":
             st.rerun()
 
     if len(df_to_val) <= 0:
-        st.info("🎉 Wszystkie pytania zostały już zwalidowane!")  
+        st.info(f"🎉 Wszystkie pytania zostały już zwalidowane! {len(df_new_ready)} nowych pytań!") 
         if st.button("Powrót"):
             if "row" in st.session_state:
                 del st.session_state.row
@@ -269,7 +269,7 @@ elif st.session_state.step == "new_que_edit":
     else:
         if "row" not in st.session_state:
             st.session_state.row = df_to_val.iloc[0].tolist()
-    st.markdown(f"Pozostało {len(df_to_val)} pytań. Zrobiono {len(df_new_ready)} pytań")
+    st.markdown(f"Pozostało {len(df_to_val)} pytań. Dodano {len(df_new_ready)} nowych pytań")
     row = st.session_state.row
     row[0] = new_id("".join([c for c in row[0] if c.isalpha()]))
     st.text_input(f"🆔 ID: ", value=row[0], key = "ID")
