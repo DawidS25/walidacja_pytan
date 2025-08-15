@@ -108,7 +108,6 @@ if st.session_state.step == "editor":
     df_to_val = df_all[~df_all["id"].isin(df_used["id"])]
 
     st.markdown(f"Zwalidowano {len(df_used)} z {len(df_all)} pytań. Zostało {len(df_to_val)} do końca.")
-
     if df_to_val.empty:
         st.info("🎉 Wszystkie pytania zostały już zwalidowane!")
     else:
@@ -138,7 +137,6 @@ if st.session_state.step == "editor":
             st.session_state.left,
             st.session_state.right
         ]
-        row = edited_row
         if "edited_row" not in st.session_state:
             st.session_state.edited_row = edited_row
         else:
@@ -148,6 +146,7 @@ if st.session_state.step == "editor":
             st.session_state.row_to_import = row_to_import
         else:
             st.session_state.row_to_import = row_to_import
+        st.session_state.row = edited_row
         st.session_state.step = "walidacja"
         st.rerun()
     if st.button("❌ Odrzuć pytanie"):
