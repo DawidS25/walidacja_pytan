@@ -71,13 +71,6 @@ def upload_to_github(file_path, repo, path_in_repo, token, commit_message):
     return response
 
 
-
-
-
-
-
-
-
 if "step" not in st.session_state:
     st.session_state.step = "editor"
 
@@ -192,7 +185,7 @@ elif st.session_state.step == "walidacja":
     )
     col1, col2 = st.columns(2)
     with col1:
-        if st.button("🔙 Edytuj"):
+        if st.button("↩️ Edytuj"):
             st.session_state.step = "editor"
             st.rerun()
     with col2:
@@ -206,15 +199,6 @@ elif st.session_state.step == "walidacja":
             del st.session_state.row_to_import
             del st.session_state.step
             st.rerun()
-
-
-
-
-
-
-
-
-
 
 
 elif st.session_state.step == "new_que_edit":
@@ -250,13 +234,13 @@ elif st.session_state.step == "new_que_edit":
             else:
                 st.warning("⚠️ Brak tokenu GITHUB_TOKEN w Secrets Streamlit.")
     with col2:
-        if st.button("Dodaj nowe pytania"):
+        if st.button("➕ Dodaj nowe pytania"):
             st.session_state.step = "new_que"
             st.rerun()
 
     if len(df_to_val) <= 0:
         st.info(f"🎉 Wszystkie pytania zostały już zwalidowane! {len(df_new_ready)} nowych pytań!") 
-        if st.button("Powrót"):
+        if st.button("↩️ Powrót"):
             if "row" in st.session_state:
                 del st.session_state.row
             if "edited_row" in st.session_state:
@@ -307,7 +291,7 @@ elif st.session_state.step == "new_que_edit":
             del st.session_state.row_to_import
         st.session_state.step = "new_que_edit"
         st.rerun()
-    if st.button("Powrót"):
+    if st.button("↩️ Powrót"):
         if "row" in st.session_state:
             del st.session_state.row
         if "edited_row" in st.session_state:
@@ -329,7 +313,7 @@ elif st.session_state.step == "new_que_val":
     )
     col1, col2 = st.columns(2)
     with col1:
-        if st.button("🔙 Edytuj"):
+        if st.button("↩️ Edytuj"):
             st.session_state.step = "new_que_edit"
             st.rerun()
     with col2:
@@ -354,7 +338,7 @@ elif st.session_state.step == "new_que":
         with open("que_new.csv", "a", encoding="utf-8") as f:
             f.write("\n" + st.session_state.new_que.strip())
         st.success("✅ Plik que_new.csv został zapisany lokalnie!")
-    if st.button("Powrót"):
+    if st.button("↩️ Powrót"):
         st.session_state.step = "new_que_edit"
         st.rerun()
 
