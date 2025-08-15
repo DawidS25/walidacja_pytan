@@ -343,7 +343,7 @@ elif st.session_state.step == "new_que":
 
     if st.button("Powrót"):
         st.session_state.step = "new_que_edit"
-        st.rerun
+        st.rerun()
 
 # git pull origin main --rebase
 # git add .
