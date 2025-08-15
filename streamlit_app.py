@@ -18,8 +18,7 @@ def new_id(old_id):
     }
     return mapping.get(old_id, old_id)
 
-def save_to_ready(row_to_import):
-    file_path = "que_ready.csv"
+def save_to_ready(row_to_import, file_path):
     parts = row_to_import.strip().split(";")
     old_id = parts[0]  # np. 'dyl000'
     prefix = "".join([c for c in old_id if c.isalpha()])  # pierwsze 3 litery
@@ -138,7 +137,7 @@ if st.session_state.step == "editor":
     st.text_input("❓ Pytanie:", value=row[1], key="question")
     st.text_input("⬅️ Lewo:", value=row[3], key="left")
     st.text_input("➡️ Prawo:", value=row[4], key="right")
-    if st.button("Zatwierdź zmiany"):
+    if st.button("💾 Zatwierdź zmiany"):
         edited_row = [
             st.session_state.ID.strip(),
             st.session_state.question,
@@ -157,7 +156,7 @@ if st.session_state.step == "editor":
             st.session_state.row_to_import = row_to_import
         st.session_state.step = "walidacja"
         st.rerun()
-    if st.button("Odrzuć pytanie"):
+    if st.button("❌ Odrzuć pytanie"):
         save_to_used(orginal_row_to_import)
         del st.session_state.row
         del st.session_state.orginal_row
@@ -167,6 +166,17 @@ if st.session_state.step == "editor":
         if "row_to_import" in st.session_state:
             del st.session_state.row_to_import
         del st.session_state.step
+        st.rerun()
+    if st.button("✍️ Nowe pytania"):
+        del st.session_state.row
+        del st.session_state.orginal_row
+        del st.session_state.orginal_row_to_import
+        if "edited_row" in st.session_state:
+            del st.session_state.edited_row
+        if "row_to_import" in st.session_state:
+            del st.session_state.row_to_import
+        del st.session_state.step
+        st.session_state.step = "new_que_edit"
         st.rerun()
 
 elif st.session_state.step == "walidacja":
@@ -182,12 +192,12 @@ elif st.session_state.step == "walidacja":
     )
     col1, col2 = st.columns(2)
     with col1:
-        if st.button("Edytuj"):
+        if st.button("🔙 Edytuj"):
             st.session_state.step = "editor"
             st.rerun()
     with col2:
-        if st.button("✅"):
-            save_to_ready(row_to_import)
+        if st.button("✅ Zapisz pytanie"):
+            save_to_ready(row_to_import, "que_ready.csv")
             save_to_used(orginal_row_to_import)
             del st.session_state.row
             del st.session_state.orginal_row
@@ -196,6 +206,145 @@ elif st.session_state.step == "walidacja":
             del st.session_state.row_to_import
             del st.session_state.step
             st.rerun()
+
+
+
+
+
+
+
+
+
+
+
+elif st.session_state.step == "new_que_edit":
+    df_to_val = pd.read_csv('que_new.csv', sep=';')
+    df_new_ready = pd.read_csv('que_new_ready.csv', sep=';')
+
+    if len(df_to_val) <= 0:
+        st.info("🎉 Wszystkie pytania zostały już zwalidowane!")
+        if st.button("Powrót"):
+            if "row" in st.session_state:
+                del st.session_state.row
+            if "edited_row" in st.session_state:
+                del st.session_state.edited_row
+            if "row_to_import" in st.session_state:
+                del st.session_state.row_to_import
+            st.session_state.step = "editor"
+            st.rerun()
+        st.stop()
+    else:
+        if "row" not in st.session_state:
+            st.session_state.row = df_to_val.iloc[0].tolist()
+    st.markdown(f"Pozostało {len(df_to_val)} pytań. Zrobiono {len(df_new_ready)} pytań")
+    row = st.session_state.row
+    row[0] = new_id("".join([c for c in row[0] if c.isalpha()]))
+    st.text_input(f"🆔 ID: ", value=row[0], key = "ID")
+    st.text_input("📚 Kategoria:", value=row[2], key="category")
+    st.text_input("❓ Pytanie:", value=row[1], key="question")
+    st.text_input("⬅️ Lewo:", value=row[3], key="left")
+    st.text_input("➡️ Prawo:", value=row[4], key="right")
+
+    if st.button("💾 Zatwierdź zmiany"):
+        edited_row = [
+            st.session_state.ID.strip(),
+            st.session_state.question,
+            st.session_state.category.strip(),
+            st.session_state.left,
+            st.session_state.right
+        ]
+        if "edited_row" not in st.session_state:
+            st.session_state.edited_row = edited_row
+        else:
+            st.session_state.edited_row = edited_row
+        row_to_import = f"{edited_row[0]}000;{edited_row[1]};{edited_row[2]};{edited_row[3]};{edited_row[4]}"
+        if "row_to_import" not in st.session_state:
+            st.session_state.row_to_import = row_to_import
+        else:
+            st.session_state.row_to_import = row_to_import
+        st.session_state.step = "new_que_val"
+        st.rerun()
+    if st.button("❌ Odrzuć pytanie"):
+        df_to_val = df_to_val.drop(df_to_val.index[0])
+        df_to_val.to_csv('que_new.csv', index=False, sep=';')
+        del st.session_state.row
+        if "edited_row" in st.session_state:
+            del st.session_state.edited_row
+        if "row_to_import" in st.session_state:
+            del st.session_state.row_to_import
+        st.session_state.step = "new_que_edit"
+        st.rerun()
+    if st.button("Dodaj nowe pytania"):
+        st.session_state.step = "new_que"
+        st.rerun()
+    if st.button("Powrót"):
+        if "row" in st.session_state:
+            del st.session_state.row
+        if "edited_row" in st.session_state:
+            del st.session_state.edited_row
+        if "row_to_import" in st.session_state:
+            del st.session_state.row_to_import
+        st.session_state.step = "editor"
+        st.rerun()
+
+elif st.session_state.step == "new_que_val":
+    edited_row = st.session_state.edited_row
+    row_to_import = st.session_state.row_to_import
+    st.warning(
+        f"**Pytanie:**  \n"
+        f"📚 {edited_row[2]} (🆔{edited_row[0]}000)  \n"
+        f"##### **{edited_row[1]}**  \n"
+        f"⬅️ {edited_row[3]} | {edited_row[4]} ➡️  \n"
+        f"*{row_to_import}*"
+    )
+    col1, col2 = st.columns(2)
+    with col1:
+        if st.button("🔙 Edytuj"):
+            st.session_state.step = "new_que_edit"
+            st.rerun()
+    with col2:
+        if st.button("✅ Zapisz pytanie"):
+            save_to_ready(row_to_import, "que_new_ready.csv")
+            df_to_val = pd.read_csv('que_new.csv', sep=';')
+            df_to_val = df_to_val.drop(df_to_val.index[0])
+            df_to_val.to_csv('que_new.csv', index=False, sep=';')            
+            del st.session_state.row
+            del st.session_state.edited_row
+            del st.session_state.row_to_import
+            st.session_state.step = "new_que_edit"
+            st.rerun()
+
+elif st.session_state.step == "new_que":
+    st.text_area(
+        "Wprowadź nowe pytania do walidacji w postaci .csv",
+        value = "",
+        key = "new_que"
+    )
+    if st.button("💾 Dopisz te pytania do bazy własnej do sprawdzenia"):
+        repo = "DawidS25/walidacja_pytan"
+        file_path = "que_new.csv"
+        path_in_repo = "que_new.csv"
+        commit_message = "Nowe pytania do walidacji"
+
+        try:
+            token = st.secrets["GITHUB_TOKEN"]
+        except Exception:
+            token = None
+
+        if token:
+            res = upload_to_github(file_path, repo, path_in_repo, token, commit_message)
+            if res.status_code in (200, 201):
+                st.success("✅ Plik que_new.csv został nadpisany na GitHub!")
+                st.rerun()
+            else:
+                st.error(f"❌ Błąd zapisu que_used.csv: {res.status_code} – {res.text}")
+        else:
+            st.warning("⚠️ Brak tokenu GITHUB_TOKEN w Secrets Streamlit.")
+        st.session_state.step = "new_que_edit"
+
+    if st.button("Powrót"):
+        st.session_state.step = "new_que_edit"
+        st.rerun
 
 # git pull origin main --rebase
 # git add .
