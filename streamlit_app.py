@@ -279,6 +279,7 @@ elif st.session_state.step == "new_que_edit":
             st.session_state.row_to_import = row_to_import
         else:
             st.session_state.row_to_import = row_to_import
+            st.session_state.row = edited_row
         st.session_state.step = "new_que_val"
         st.rerun()
     if st.button("❌ Odrzuć pytanie"):
