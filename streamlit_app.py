@@ -70,6 +70,11 @@ if st.session_state.step == "start":
         st.session_state.step = "edit_que_to_edit"
         st.rerun()
 
+    df_ready = pd.read_csv("que_ready.csv", sep=";")
+    df_accepted = pd.read_csv("que_accepted.csv", sep=";")
+    df_to_edit = pd.read_csv("que_to_edit.csv", sep=";")
+    
+    st.markdown(f"✅: {len(df_accept)} | ❓: {len(df_ready)} | ✍️: {len(df_to_edit)}"
 
 # --- WALIDACJA PYTAŃ GOTOWYCH ---
 elif st.session_state.step == "ready_val":
