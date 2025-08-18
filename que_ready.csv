@@ -1,7 +1,6 @@
 id;text;category;left;right
 fun001;Czy Twoje oczy czasem otwierają się wcześniej niż reszta ciała?;Śmieszne;NIE;TAK
 pik001;Czy Twoje życie intymne to dla Ciebie luźny temat?;Pikantne;NIE;TAK
-wol001;Wolisz ciepłe dni czy chłodne wieczory?;Wolisz;CIEPŁE DNI;CHŁODNE WIECZORY
 wol002;Wolisz chodzić na siłownię czy biegać na świeżym powietrzu?;Wolisz;SIŁOWNIA;ŚWIEŻE POWIETRZE
 pre001;Jak bardzo lubiłeś spędzać czas na podwórku?;Przeszłość;NIE LUBIŁEM;LUBIŁEM
 pik002;Czy inicjujesz zbliżenia częściej niż Twój partner?;Pikantne;NIE;TAK
@@ -139,7 +138,6 @@ dyl012;Wolisz nigdy nie odczuwać głodu czy nigdy nie odczuwać zmęczenia?;Dyl
 luz015;Czy chciałbyś pracować jako tester łóżek?;Luźne;NIE;TAK
 wol026;Wolisz być kierowcą czy pasażerem?;Wolisz;KIEROWCA;PASAŻER
 wol027;Wolisz biegać rano czy wieczorem?;Wolisz;RANO;WIECZOREM
-luz016;Czy kiedy coś porządkujesz, kończy się to wspominkami?;Luźne;NIE;TAK
 pik017;Czy jesteś otwarty na zmysłowe gry i zabawy?;Pikantne;NIE;TAK
 luz017;Czy masz specjalną „pozycję do scrollowania telefonu”?;Luźne;NIE;TAK
 swi019;Uważasz, że technologia przynosi więcej dobra czy zła?;Światopoglądowe;DOBRA;ZŁA
@@ -368,7 +366,6 @@ pik038;Czy sytuacje „zakazane” bywają dla Ciebie bardziej ekscytujące?;Pik
 swi053;Czy uważasz, że młodzież powinna mieć większy wpływ na politykę?;Światopoglądowe;NIE;TAK
 swi054;Czy uważasz, że zmiany klimatu to poważny problem?;Światopoglądowe;NIE;TAK
 fun054;Czy Twój zegar biologiczny żyje własnym życiem?;Śmieszne;NIE;TAK
-dyl036;Wolisz nigdy nie używać emoji czy nigdy nie używać memów?;Dylematy;NIE UŻYWAĆ EMOJI;NIE UŻYWAĆ MEMÓW
 wol060;Wolisz jeść na słodko czy na słono?;Wolisz;NA SŁODKO;NA SŁONO
 fun055;Czy zdarza Ci się kichnąć tak mocno, że wystraszysz nawet siebie?;Śmieszne;NIE;TAK
 wol061;Wolisz jeść owoce czy warzywa?;Wolisz;OWOCE;WARZYWA
@@ -410,14 +407,12 @@ swi060;Uważasz, że nauka powinna dominować nad wiarą?;Światopoglądowe;NIE;
 zwi045;Czy starasz się unikać niepotrzebnych spięć w związku?;Związkowe;NIE;TAK
 swi061;Czy uważasz, że społeczeństwo jest zbyt uzależnione od technologii?;Światopoglądowe;NIE;TAK
 swi062;Czy uważasz, że praca powinna dawać przede wszystkim satysfakcję, a nie pieniądze?;Światopoglądowe;NIE;TAK
-pre056;Czy zdarzało Ci się robić coś zakazanego, do czego nie przyznawałeś się rodzicom?;Przeszłość;NIE;TAK
 fun060;Czy Twoje sny czasem są tak dziwne, że boisz się o własny mózg?;Śmieszne;NIE;TAK
 swi063;Czy Twoim zdaniem państwo powinno mieć większy wpływ na wychowanie dzieci?;Światopoglądowe;NIE;TAK
 fun061;Czy zdarza Ci się napisać wiadomość i zapomnieć ją wysłać?;Śmieszne;NIE;TAK
 wol068;Wolisz kawę czy herbatę?;Wolisz;KAWA;HERBATA
 pik042;Czy flirtowanie w miejscu publicznym daje Ci dreszczyk emocji?;Pikantne;NIE;TAK
 zwi046;Czy Twoim zdaniem w relacji powinno się mówić wszystko?;Związkowe;NIE;TAK
-pre057;Czy w szkole pomagałeś innym dzieciom w nauce?;Przeszłość;NIE;TAK
 pik043;Czy Twoja wyobraźnia erotyczna bywa zaskakująca nawet dla Ciebie?;Pikantne;NIE;TAK
 zwi047;Czy bywasz niepewny swoich uczuć w dłuższej relacji?;Związkowe;NIE;TAK
 zwi048;Czy jesteś typem romantyka?;Związkowe;NIE;TAK
@@ -431,7 +426,6 @@ luz042;Czy chciałbyś mieszkać w domku na drzewie?;Luźne;NIE;TAK
 luz043;Czy czasem udajesz, że kogoś nie widzisz, żeby z nim nie rozmawiać?;Luźne;NIE;TAK
 fun063;Czy czasami zapominasz, co chciałeś kupić zaraz po wejściu do sklepu?;Śmieszne;NIE;TAK
 zwi050;Czy potrafisz spać spokojnie po kłótni z bliską osobą?;Związkowe;NIE;TAK
-pik044;Myślisz, że ważniejsza jest długość czy technika?;Pikantne;DŁUGOŚĆ;TECHNIKA
 zwi051;Czy umiesz zostawić partnerowi przestrzeń dla siebie?;Związkowe;NIE;TAK
 pik045;Czy jesteś otwarty na próbowanie nowych rzeczy w łóżku?;Pikantne;NIE;TAK
 swi065;Czy uważasz, że dzieci powinny mieć prawo decydować o swoim życiu?;Światopoglądowe;NIE;TAK
