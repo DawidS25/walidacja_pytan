@@ -4,7 +4,6 @@ pik001;Czy Twoje życie intymne to dla Ciebie luźny temat?;Pikantne;NIE;TAK
 wol002;Wolisz chodzić na siłownię czy biegać na świeżym powietrzu?;Wolisz;SIŁOWNIA;ŚWIEŻE POWIETRZE
 pre001;Jak bardzo lubiłeś spędzać czas na podwórku?;Przeszłość;NIE LUBIŁEM;LUBIŁEM
 zwi001;Czy potrafisz dzielić się swoimi obawami bez poczucia słabości?;Związkowe;NIE;TAK
-zwi002;Co jest dla ciebie ważniejsze w związku - czułość czy rozmowa?;Związkowe;CZUŁOŚĆ;ROZMOWA
 pre002;Jako dziecko byłeś bardziej niejadkiem czy wszystkożercą?;Przeszłość;NIEJADKIEM;WSZYSTKOŻERCĄ
 pre003;Jak dobrze pamiętasz swoje ulubione smaki dzieciństwa?;Przeszłość;SŁABO;DOBRZE
 wol005;Wolisz pracować w zespole czy samodzielnie?;Wolisz;W ZESPOLE;SAMODZIELNIE
@@ -45,7 +44,6 @@ zwi006;Czy czujesz się wystarczająco słuchany w rozmowach?;Związkowe;NIE;TAK
 luz003;Czy umiesz przewidzieć pogodę patrząc przez okno?;Luźne;NIE;TAK
 pik008;Twoje fantazje bywają bardziej emocjonalne czy fizyczne?;Pikantne;NIE;TAK
 luz004;Czy potrafisz prowadzić logiczną rozmowę tuż po obudzeniu?;Luźne;NIE;TAK
-wol011;Wolisz oglądać seriale czy filmy?;Wolisz;SERIALE;FILMY
 wol012;Wolisz oglądać filmy science fiction czy dokumentalne?;Wolisz;SCIENCE FICTION;DOKUMENTALNE
 luz005;Czy zdarza Ci się zjeść coś z podłogi?;Luźne;NIE;TAK
 luz006;Czy jesteś w stanie zapamiętać trzy rzeczy, jedynie kiedy zapiszesz je w pięciu miejscach?;Luźne;NIE;TAK
@@ -266,7 +264,6 @@ pre047;Czy lubiłeś spędzać czas z rodzeństwem?;Przeszłość;NIE;TAK
 wol049;Wolisz rozwiązywać krzyżówki czy sudoku?;Wolisz;KRZYŻÓWKI;SUDOKU
 fun040;Czy zdarza Ci się wciskać 'drzemkę' tyle razy, że spóźniasz się wszędzie?;Śmieszne;NIE;TAK
 swi046;Czy zgadzasz się z tym, że trudności młodych ludzi są niedoceniane?;Światopoglądowe;NIE;TAK
-pik034;Czy potrafisz całkowicie poddać się drugiej osobie?;Pikantne;NIE;TAK
 swi047;Czy zgadzasz się z ideą, że pieniądze szczęścia nie dają?;Światopoglądowe;NIE;TAK
 luz035;Potrafisz zrobić obiad z tego, co akurat masz w lodówce, czy musisz zawsze pójść na zakupy?;Luźne;OBIAD Z TEGO CO JEST;ZAKUPY ZA KAŻDYM RAZEM
 fun041;Czy masz talent do rozlewania napojów w najbardziej nieodpowiednich momentach?;Śmieszne;NIE;TAK
@@ -304,12 +301,10 @@ swi050;Czy uważasz, że każdy zasługuje na szacunek – niezależnie od pogl�
 fun049;Czy masz talent do zapominania, gdzie zostawiłeś klucze?;Śmieszne;NIE;TAK
 wol058;Wolisz spędzać weekend w domu czy na wycieczce?;Wolisz;W DOMU;NA WYCIECZCE
 dyl035;Wolisz mieć super moc zmiany koloru włosów na życzenie czy zmiany koloru oczu?;Dylematy;KOLOR WŁOSÓW;KOLOR OCZU
-luz037;Czy często gubisz rzeczy, które trzymasz w ręce?;Luźne;RZADKO;CZĘSTO
 fun051;Czy jesteś specjalistą od przewracania się o nic?;Śmieszne;NIE;TAK
 pik037;Jesteś bardziej dominujący czy uległy?;Pikantne;DOMINUJĄCY;ULEGŁY
 pre050;Czy często sięgałeś po słodycze jako dziecko?;Przeszłość;NIE;TAK
 pre052;Czy jesteś zadowolony ze swojego zachowania w dzieciństwie?;Przeszłość;NIE;TAK
-swi051;Jak ważne są dla Ciebie tradycje?;Światopoglądowe;NIE SĄ WAŻNE;BARDZO WAŻNE
 zwi040;Czy potrafisz dostrzegać różnice między Wami jako coś wartościowego?;Związkowe;NIE;TAK
 fun053;Czy Twój pies lub kot czasem patrzy na Ciebie jak na dziwaka?;Śmieszne;NIE;TAK
 swi052;Czy uważasz, że edukacja powinna uwzględniać naukę empatii?;Światopoglądowe;NIE;TAK
