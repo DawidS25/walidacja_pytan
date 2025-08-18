@@ -74,7 +74,6 @@ if st.session_state.step == "start":
     df_accepted = pd.read_csv("que_accepted.csv", sep=";")
     df_to_edit = pd.read_csv("que_to_edit.csv", sep=";")
     df_new = pd.read_csv('que_new.csv', sep=';')
-    df_new_ready = pd.read_csv('que_new_ready.csv', sep=';')
     
     st.markdown(f"✅: {len(df_accepted)} | ❓: {len(df_ready)} | ✍️: {len(df_to_edit)} | 🆕: {len(df_new)}")
 
@@ -170,7 +169,7 @@ elif st.session_state.step == "new_que_edit":
         repo = "DawidS25/walidacja_pytan"
         files = {
             "que_new.csv": "que_new.csv",
-            "que_new_ready.csv": "que_new_ready.csv"
+            "que_ready.csv": "que_ready.csv"
         }
         commit_message = "Aktualizacja pytań przez Streamlit"
         try:
@@ -190,7 +189,6 @@ elif st.session_state.step == "new_que_edit":
             st.warning("⚠️ Brak tokenu GITHUB_TOKEN w Secrets Streamlit.")
 
     df_to_val = pd.read_csv('que_new.csv', sep=';')
-    df_new_ready = pd.read_csv('que_new_ready.csv', sep=';')
 
     if len(df_to_val) <= 0:
         st.info(f"🎉 Wszystkie pytania zostały już zwalidowane! {len(df_new_ready)} nowych pytań!") 
@@ -201,7 +199,7 @@ elif st.session_state.step == "new_que_edit":
     else:
         if "row" not in st.session_state:
             st.session_state.row = df_to_val.iloc[0].tolist()
-    st.markdown(f"Pozostało {len(df_to_val)} pytań. Dodano {len(df_new_ready)} nowych pytań")
+    st.markdown(f"Pozostało {len(df_to_val)} pytań.")
     row = st.session_state.row
     row[0] = new_id("".join([c for c in row[0] if c.isalpha()]))
     st.text_input(f"🆔 ID: ", value=row[0], key = "ID")
@@ -225,7 +223,7 @@ elif st.session_state.step == "new_que_edit":
             edited_row[3],
             edited_row[4]
         ]
-        save_row(row_to_import, "que_new_ready.csv")
+        save_row(row_to_import, "que_ready.csv")
         df_to_val = df_to_val.drop(df_to_val.index[0])
         df_to_val.to_csv('que_new.csv', index=False, sep=';')            
         del st.session_state.row
