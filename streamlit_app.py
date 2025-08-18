@@ -187,6 +187,10 @@ elif st.session_state.step == "new_que_edit":
                         st.error(f"❌ Błąd zapisu {file_path}: {res.status_code} – {res.text}")
         else:
             st.warning("⚠️ Brak tokenu GITHUB_TOKEN w Secrets Streamlit.")
+            
+    if st.button("➕ Dodaj nowe pytania"):
+        st.session_state.step = "new_que"
+        st.rerun()
 
     df_to_val = pd.read_csv('que_new.csv', sep=';')
 
