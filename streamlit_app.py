@@ -97,6 +97,8 @@ elif st.session_state.step == "ready_val":
             st.warning("⚠️ Brak tokenu GITHUB_TOKEN w Secrets Streamlit.")
 
     df_ready = pd.read_csv("que_ready.csv", sep=";")
+    df_accepted = []
+    df_to_edit = []
 
     if df_ready.empty:
         st.info("🎉 Brak pytań w pliku que_ready.csv")
@@ -109,6 +111,7 @@ elif st.session_state.step == "ready_val":
         st.session_state.row = df_ready.sample(n=1).iloc[0].tolist()
 
     row = st.session_state.row
+    st.markdown(f"Do zrobienia: {len(df_ready)} | Zaakceptowane: {len(df_accepted)} | Do Edycji: {len(df_to_edit)}")
     st.warning(
         f"**Pytanie:**  \n"
         f"📚 {row[2]} (🆔{row[0]})  \n"
