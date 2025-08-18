@@ -65,6 +65,10 @@ if st.session_state.step == "start":
     if st.button("✅ Walidacja pytań gotowych"):
         st.session_state.step = "ready_val"
         st.rerun()
+    
+    if st.button("✍️ Edycja pytań"):
+        st.session_state.step = "edit_que_to_edit"
+        st.rerun()
 
 
 # --- WALIDACJA PYTAŃ GOTOWYCH ---
@@ -246,3 +250,84 @@ elif st.session_state.step == "new_que":
     if st.button("↩️ Powrót"):
         st.session_state.step = "new_que_edit"
         st.rerun()
+
+# --- EDYCJA PYTAŃ Z que_to_edit ---
+elif st.session_state.step == "edit_que_to_edit":
+    st.subheader("✍️ Edycja pytań do poprawki")
+
+    df_to_edit = pd.read_csv("que_to_edit.csv", sep=";")
+
+    if df_to_edit.empty:
+        st.info("🎉 Brak pytań w pliku que_to_edit.csv")
+        if st.button("↩️ Powrót"):
+            st.session_state.step = "start"
+            st.rerun()
+        st.stop()
+
+    if "row" not in st.session_state:
+        st.session_state.row = df_to_edit.sample(n=1).iloc[0].tolist()
+
+    row = st.session_state.row
+    st.markdown(f"Pozostało {len(df_to_edit)} pytań do edycji")
+
+    st.text_input("🆔 ID:", value=row[0], key="edit_ID")
+    st.text_input("📚 Kategoria:", value=row[2], key="edit_category")
+    st.text_input("❓ Pytanie:", value=row[1], key="edit_question")
+    st.text_input("⬅️ Lewo:", value=row[3], key="edit_left")
+    st.text_input("➡️ Prawo:", value=row[4], key="edit_right")
+
+    if st.button("👀 Zobacz zmiany"):
+        edited_row = [
+            st.session_state.edit_ID.strip(),
+            st.session_state.edit_question.strip(),
+            st.session_state.edit_category.strip(),
+            st.session_state.edit_left.strip(),
+            st.session_state.edit_right.strip()
+        ]
+        st.session_state.edited_row = edited_row
+        st.session_state.step = "que_to_edit_val"
+        st.rerun()
+
+    if st.button("↩️ Powrót"):
+        if "row" in st.session_state:
+            del st.session_state.row
+        st.session_state.step = "ready_val"
+        st.rerun()
+
+
+# --- WALIDACJA POPRAWIONEGO PYTANIA ---
+elif st.session_state.step == "que_to_edit_val":
+    st.subheader("👀 Walidacja poprawionego pytania")
+
+    if "edited_row" not in st.session_state:
+        st.warning("⚠️ Brak pytania do walidacji")
+        st.session_state.step = "edit_que_to_edit"
+        st.rerun()
+
+    row = st.session_state.edited_row
+    st.warning(
+        f"**Pytanie (po edycji):**  \n"
+        f"📚 {row[2]} (🆔{row[0]})  \n"
+        f"##### **{row[1]}**  \n"
+        f"⬅️ {row[3]} | {row[4]} ➡️  \n"
+    )
+
+    col1, col2 = st.columns(2)
+    with col1:
+        if st.button("✅ Akceptuj"):
+            save_row(row, "que_accepted.csv")
+
+            # usuń z que_to_edit
+            df_to_edit = pd.read_csv("que_to_edit.csv", sep=";")
+            df_to_edit = df_to_edit[df_to_edit["id"] != row[0]]
+            df_to_edit.to_csv("que_to_edit.csv", sep=";", index=False)
+
+            del st.session_state.row
+            del st.session_state.edited_row
+            st.session_state.step = "edit_que_to_edit"
+            st.rerun()
+
+    with col2:
+        if st.button("↩️ Powrót do edycji"):
+            st.session_state.step = "edit_que_to_edit"
+            st.rerun()
