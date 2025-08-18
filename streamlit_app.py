@@ -255,6 +255,29 @@ elif st.session_state.step == "new_que":
 elif st.session_state.step == "edit_que_to_edit":
     st.subheader("✍️ Edycja pytań do poprawki")
 
+    if st.button("💾 Zapisz na GitHub"):
+        repo = "DawidS25/walidacja_pytan"
+        files = {
+            "que_accepted.csv": "que_accepted.csv",
+            "que_to_edit.csv": "que_to_edit.csv"
+        }
+        commit_message = "Aktualizacja pytań przez Streamlit"
+        try:
+            token = st.secrets["GITHUB_TOKEN"]
+        except Exception:
+            token = None
+
+        if token:
+            for file_path, path_in_repo in files.items():
+                if os.path.exists(file_path):
+                    res = upload_to_github(file_path, repo, path_in_repo, token, commit_message)
+                    if res.status_code in (200, 201):
+                        st.success(f"✅ Plik {file_path} został zapisany na GitHub!")
+                    else:
+                        st.error(f"❌ Błąd zapisu {file_path}: {res.status_code} – {res.text}")
+        else:
+            st.warning("⚠️ Brak tokenu GITHUB_TOKEN w Secrets Streamlit.")
+
     df_to_edit = pd.read_csv("que_to_edit.csv", sep=";")
 
     if df_to_edit.empty:
