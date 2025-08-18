@@ -307,6 +307,7 @@ elif st.session_state.step == "edit_que_to_edit":
             st.session_state.edit_left.strip(),
             st.session_state.edit_right.strip()
         ]
+        st.session_state.row = edited_row
         st.session_state.edited_row = edited_row
         st.session_state.step = "que_to_edit_val"
         st.rerun()
