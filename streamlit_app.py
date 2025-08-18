@@ -73,8 +73,10 @@ if st.session_state.step == "start":
     df_ready = pd.read_csv("que_ready.csv", sep=";")
     df_accepted = pd.read_csv("que_accepted.csv", sep=";")
     df_to_edit = pd.read_csv("que_to_edit.csv", sep=";")
+    df_new = pd.read_csv('que_new.csv', sep=';')
+    df_new_ready = pd.read_csv('que_new_ready.csv', sep=';')
     
-    st.markdown(f"✅: {len(df_accepted)} | ❓: {len(df_ready)} | ✍️: {len(df_to_edit)}")
+    st.markdown(f"✅: {len(df_accepted)} | ❓: {len(df_ready)} | ✍️: {len(df_to_edit)} | 🆕: {len(que_new)}")
 
 # --- WALIDACJA PYTAŃ GOTOWYCH ---
 elif st.session_state.step == "ready_val":
