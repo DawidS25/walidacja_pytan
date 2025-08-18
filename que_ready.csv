@@ -1,6 +1,5 @@
 id;text;category;left;right
 fun001;Czy Twoje oczy czasem otwierają się wcześniej niż reszta ciała?;Śmieszne;NIE;TAK
-pik001;Czy Twoje życie intymne to dla Ciebie luźny temat?;Pikantne;NIE;TAK
 wol002;Wolisz chodzić na siłownię czy biegać na świeżym powietrzu?;Wolisz;SIŁOWNIA;ŚWIEŻE POWIETRZE
 pre001;Jak bardzo lubiłeś spędzać czas na podwórku?;Przeszłość;NIE LUBIŁEM;LUBIŁEM
 zwi001;Czy potrafisz dzielić się swoimi obawami bez poczucia słabości?;Związkowe;NIE;TAK
@@ -55,7 +54,6 @@ pre012;Na ile byłeś zadowolony ze swoich wyników w nauce?;Przeszłość;W OG�
 dyl005;Wolisz nie móc kłamać czy nie móc mówić prawdy?;Dylematy;NIE MÓC KŁAMAĆ;NIE MÓC MÓWIĆ PRAWDY
 pre013;Lubiłeś pomagać nauczycielom w klasie?;Przeszłość;NIE;TAK
 luz007;Czy rozważyłbyś zamieszkanie w Ikei?;Luźne;NIE;TAK
-luz008;Czy masz nawyk tworzenia playlist na każdą możliwą okazję?;Luźne;NIE;TAK
 pre014;Czy lubiłeś odpowiadać przy tablicy w szkole?;Przeszłość;NIE;TAK
 dyl006;Wolisz mieć zwierzę, które mówi czy lata?;Dylematy;MÓWI;LATA
 fun011;Czy zdarza Ci się kliknąć 'odśwież' szybciej, niż strona ma szansę się załadować?;Śmieszne;NIE;TAK
@@ -313,7 +311,6 @@ swi053;Czy uważasz, że młodzież powinna mieć większy wpływ na politykę?;
 swi054;Czy uważasz, że zmiany klimatu to poważny problem?;Światopoglądowe;NIE;TAK
 fun054;Czy Twój zegar biologiczny żyje własnym życiem?;Śmieszne;NIE;TAK
 wol060;Wolisz jeść na słodko czy na słono?;Wolisz;NA SŁODKO;NA SŁONO
-fun055;Czy zdarza Ci się kichnąć tak mocno, że wystraszysz nawet siebie?;Śmieszne;NIE;TAK
 wol061;Wolisz jeść owoce czy warzywa?;Wolisz;OWOCE;WARZYWA
 zwi041;Czy lubisz wspólne gotowanie jako formę spędzania czasu?;Związkowe;NIE;TAK
 dyl037;Wolisz mieć w kieszeni zawsze 10 groszy czy 5 cukierków?;Dylematy;10 GROSZY;5 CUKIERKÓW
@@ -358,7 +355,6 @@ zwi047;Czy bywasz niepewny swoich uczuć w dłuższej relacji?;Związkowe;NIE;TA
 zwi048;Czy jesteś typem romantyka?;Związkowe;NIE;TAK
 fun062;Czy masz na swoim telefonie taki bałagan, że szukasz aplikacji godzinami?;Śmieszne;NIE;TAK
 wol069;Wolisz ubierać się kolorowo czy stonowanie?;Wolisz;KOLOROWO;STONOWANIE
-luz041;Czy zdarza Ci się rozmawiać z roślinami w mieszkaniu?;Luźne;NIE;TAK
 zwi049;Czy czujesz się słuchany w związku?;Związkowe;NIE;TAK
 swi064;Czy wierzysz w życie po śmierci?;Światopoglądowe;NIE;TAK
 luz042;Czy chciałbyś mieszkać w domku na drzewie?;Luźne;NIE;TAK
@@ -396,7 +392,6 @@ dyl045;Wolisz mieć talent do śpiewania czy do tańca?;Dylematy;ŚPIEW;TANIEC
 swi071;Jak ważne są dla Ciebie wartości rodzinne?;Światopoglądowe;W OGÓLE;BARDZO
 luz047;Czy byłbyś w stanie zamieszkać w małym domku na wsi bez technologii?;Luźne;NIE;TAK
 pre061;Jak bardzo lubiłeś zajęcia plastyczne w szkole?;Przeszłość;NIE LUBIŁEM;UWIELBIAŁEM
-pik052;Czy ważna jest dla Ciebie estetyka w zbliżeniach?;Pikantne;NIE;TAK
 luz048;Czy masz czasami poważną rozmowę z lustrem?;Luźne;NIE;TAK
 dyl046;Wolisz jeść tylko potrawy o jednej barwie czy o jednej konsystencji?;Dylematy;JEDNA BARWA;JEDNA KONSYSTENCJA
 swi072;Czy zgadzasz się z tym, że każda religia powinna być traktowana równo?;Światopoglądowe;NIE;TAK
