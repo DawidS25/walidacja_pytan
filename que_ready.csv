@@ -9,7 +9,6 @@ wol005;Wolisz pracować w zespole czy samodzielnie?;Wolisz;W ZESPOLE;SAMODZIELNI
 dyl001;Wolisz codziennie dostawać list od nieznajomego czy nigdy nie dostawać żadnej wiadomości?;Dylematy;CODZIENNIE OD NIEZNAJOMEGO;NIGDY OD NIKOGO
 fun002;Czy zdarza ci się upuścić coś na stopę dokładnie wtedy, gdy jesteś boso?;Śmieszne;NIE;TAK
 fun003;Czy Twój umysł czasem idzie na wakacje, gdy ktoś coś tłumaczy?;Śmieszne;NIE;TAK
-zwi003;Potrafisz mówić o swoich potrzebach bez poczucia winy?;Związkowe;NIE;TAK
 fun005;Czy do snu robisz z siebie burrito zawijając się w koc lub kołdrę?;Śmieszne;NIE;TAK
 pik003;Czy wolisz prowadzić czy być prowadzonym w sytuacjach intymnych?;Pikantne;PROWADZIĆ;BYĆ PROWADZONYM
 pre005;Jak często pomagałeś w domu rodzeństwu?;Przeszłość;RZADKO;CZĘSTO
@@ -102,7 +101,6 @@ swi015;Twoim zdaniem społeczeństwo powinno być bardziej oparte na współprac
 wol024;Wolisz oglądać komedie czy thrillery?;Wolisz;KOMEDIE;THRILLERY
 swi016;Uważasz, że internet powinien być wolny i nieograniczony?;Światopoglądowe;NIE;TAK
 wol025;Wolisz mieć dużo znajomych czy kilku bliskich przyjaciół?;Wolisz;DUŻO ZNAJOMYCH;KILKU PRZYJACIÓŁ
-swi017;Czy uważasz, że wolność jednostki powinna mieć swoje granice?;Światopoglądowe;NIE;TAK
 swi018;Czy uważasz, że młodzi ludzie powinni częściej angażować się społecznie?;Światopoglądowe;NIE;TAK
 dyl012;Wolisz nigdy nie odczuwać głodu czy nigdy nie odczuwać zmęczenia?;Dylematy;NIE ODCZUWAĆ GŁODU;NIE ODCZUWAĆ ZMĘCZENIA
 luz015;Czy chciałbyś pracować jako tester łóżek?;Luźne;NIE;TAK
@@ -138,7 +136,6 @@ wol032;Wolisz lato pełne słońca czy lekki deszcz?;Wolisz;PEŁNE SŁOŃCE;LEKK
 wol033;Wolisz spacerować po lesie czy nad morzem?;Wolisz;PO LESIE;NAD MORZEM
 swi023;Czy zgadzasz się, że człowiek jest odpowiedzialny za los planety?;Światopoglądowe;NIE;TAK
 swi024;Czy uważasz, że każdy człowiek zasługuje na drugą szansę?;Światopoglądowe;NIE;TAK
-luz019;Czy lubisz robić notatki, których nigdy nie czytasz?;Luźne;NIE;TAK
 dyl013;Wolisz być najzabawniejszą osobą w grupie czy najbardziej poważną?;Dylematy;NAJZABAWNIEJSZĄ;NAJPOWAŻNIEJSZĄ
 swi025;Uważasz, że każdy powinien ponosić odpowiedzialność za swoje czyny?;Światopoglądowe;NIE;TAK
 swi026;Popierasz ideę wolności religijnej?;Światopoglądowe;NIE;TAK
@@ -224,7 +221,6 @@ pre041;Czy byłeś osobą, która łatwo nawiązywała nowe znajomości?;Przesz�
 swi042;Czy uważasz, że rozwój cywilizacji wpływa negatywnie na naturę?;Światopoglądowe;NIE;TAK
 luz029;Czy Twoje sny czasem mają więcej sensu niż rzeczywistość?;Luźne;NIE UWAŻAM TAK;CZĘSTO TAK JEST
 pik031;Czy lubisz eksperymentować z miejscem i czasem zbliżenia?;Pikantne;NIE;TAK
-fun036;Jak często udajesz, że rozumiesz, o czym ktoś mówi?;Śmieszne;NIGDY;ZAWSZE
 pre042;Czy byłeś zadowolony z relacji z kolegami lub koleżankami?;Przeszłość;NIE;TAK
 luz030;Czy masz w sobie coś z leniwca... nawet gdy próbujesz być produktywny?;Luźne;NIE;TAK
 zwi030;Czy potrafisz mówić o swoich granicach w związku?;Związkowe;NIE;TAK
@@ -255,7 +251,6 @@ wol048;Wolisz słuchać muzyki na żywo na koncercie czy z nagrania?;Wolisz;NA �
 zwi034;Czy pamiętasz ważne daty w związku?;Związkowe;NIE;TAK
 pre047;Czy lubiłeś spędzać czas z rodzeństwem?;Przeszłość;NIE;TAK
 wol049;Wolisz rozwiązywać krzyżówki czy sudoku?;Wolisz;KRZYŻÓWKI;SUDOKU
-fun040;Czy zdarza Ci się wciskać 'drzemkę' tyle razy, że spóźniasz się wszędzie?;Śmieszne;NIE;TAK
 swi046;Czy zgadzasz się z tym, że trudności młodych ludzi są niedoceniane?;Światopoglądowe;NIE;TAK
 swi047;Czy zgadzasz się z ideą, że pieniądze szczęścia nie dają?;Światopoglądowe;NIE;TAK
 luz035;Potrafisz zrobić obiad z tego, co akurat masz w lodówce, czy musisz zawsze pójść na zakupy?;Luźne;OBIAD Z TEGO CO JEST;ZAKUPY ZA KAŻDYM RAZEM
@@ -286,7 +281,6 @@ wol053;Wolisz plażę czy góry?;Wolisz;PLAŻA;GÓRY
 wol054;Wolisz pić wodę gazowaną czy niegazowaną?;Wolisz;GAZOWANA;NIEGAZOWANA
 wol055;Wolisz nosić ubrania luźne czy eleganckie?;Wolisz;LUŹNE;ELEGANCKIE
 pre049;Czy często marzyłeś o byciu kimś wyjątkowym lub sławnym?;Przeszłość;NIE;TAK
-dyl034;Wolisz nigdy nie mieć kaca czy nigdy nie odczuwać zmęczenia?;Dylematy;BRAK KACA;BRAK ZMĘCZENIA
 fun047;Czy potrafisz udawać powagę, gdy coś jest naprawdę głupie?;Śmieszne;NIE;TAK
 wol056;Wolisz chodzić wolno czy szybko?;Wolisz;WOLNO;SZYBKO
 fun048;Czy zdarza Ci się powiedzieć 'dzień dobry' o 22:00?;Śmieszne;NIE;TAK
@@ -296,7 +290,6 @@ wol058;Wolisz spędzać weekend w domu czy na wycieczce?;Wolisz;W DOMU;NA WYCIEC
 dyl035;Wolisz mieć super moc zmiany koloru włosów na życzenie czy zmiany koloru oczu?;Dylematy;KOLOR WŁOSÓW;KOLOR OCZU
 fun051;Czy jesteś specjalistą od przewracania się o nic?;Śmieszne;NIE;TAK
 pik037;Jesteś bardziej dominujący czy uległy?;Pikantne;DOMINUJĄCY;ULEGŁY
-pre050;Czy często sięgałeś po słodycze jako dziecko?;Przeszłość;NIE;TAK
 pre052;Czy jesteś zadowolony ze swojego zachowania w dzieciństwie?;Przeszłość;NIE;TAK
 zwi040;Czy potrafisz dostrzegać różnice między Wami jako coś wartościowego?;Związkowe;NIE;TAK
 fun053;Czy Twój pies lub kot czasem patrzy na Ciebie jak na dziwaka?;Śmieszne;NIE;TAK
@@ -313,7 +306,6 @@ swi055;Czy wierzysz w to, że ludzie są z natury dobrzy?;Światopoglądowe;NIE;
 luz038;Czy często śpiewasz w samochodzie?;Luźne;NIGDY;ZAWSZE
 fun057;Czy Twoje reakcje przypominają memy?;Śmieszne;NIE;TAK
 pik039;Czy gra w dominację i uległość Cię intryguje?;Pikantne;NIE;TAK
-luz039;Czy lubisz sprawdzać lodówkę bez zamiaru wyjmowania czegokolwiek?;Luźne;NIE;TAK
 dyl038;Wolisz mieć głos jak kaczka czy chodzić jak pingwin?;Dylematy;GŁOS JAK KACZKA;CHODZIĆ JAK PINGWIN
 pre054;Czy w dzieciństwie marzyłeś żeby być już dorosłym?;Przeszłość;NIE;TAK
 zwi043;Czy Twoim zdaniem szczerość powinna być absolutna – nawet jeśli rani?;Związkowe;NIE;TAK
@@ -383,7 +375,6 @@ dyl045;Wolisz mieć talent do śpiewania czy do tańca?;Dylematy;ŚPIEW;TANIEC
 swi071;Jak ważne są dla Ciebie wartości rodzinne?;Światopoglądowe;W OGÓLE;BARDZO
 luz047;Czy byłbyś w stanie zamieszkać w małym domku na wsi bez technologii?;Luźne;NIE;TAK
 pre061;Jak bardzo lubiłeś zajęcia plastyczne w szkole?;Przeszłość;NIE LUBIŁEM;UWIELBIAŁEM
-luz048;Czy masz czasami poważną rozmowę z lustrem?;Luźne;NIE;TAK
 dyl046;Wolisz jeść tylko potrawy o jednej barwie czy o jednej konsystencji?;Dylematy;JEDNA BARWA;JEDNA KONSYSTENCJA
 swi072;Czy zgadzasz się z tym, że każda religia powinna być traktowana równo?;Światopoglądowe;NIE;TAK
 fun066;Czy czasem mówisz coś głośno, a potem zastanawiasz się, czy ktoś to usłyszał?;Śmieszne;NIGDY;CZĘSTO
@@ -419,7 +410,6 @@ wol078;Wolisz oglądać filmy z napisami czy z lektorem?;Wolisz;NAPISY;LEKTOR
 wol079;Wolisz pikantne czy łagodne jedzenie?;Wolisz;PIKANTNE;ŁAGODNE
 swi077;Jak bardzo ufasz nauce i badaniom medycznym?;Światopoglądowe;NIE UFAM;UFAM W PEŁNI
 fun070;Jak często zdarza Ci się machać komuś, kto wcale nie machał do Ciebie?;Śmieszne;RZADKO;CZĘSTO
-dyl052;Wolałbyś mieć zdolność rozmawiania z roślinami czy z przedmiotami?;Dylematy;Z ROŚLINAMI;Z PRZEDMIOTAMI
 swi078;Na ile uważasz, że system edukacji wymaga gruntownej reformy?;Światopoglądowe;W OGÓLE;BARDZO
 zwi061;Czy czujesz się komfortowo rozmawiając o przeszłości partnera?;Związkowe;NIE;TAK
 luz055;Czy myślisz o sobie jako o głównym bohaterze życia?;Luźne;NIE;TAK
