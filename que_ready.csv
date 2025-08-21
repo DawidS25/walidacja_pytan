@@ -15,7 +15,6 @@ pik003;Czy wolisz prowadzić czy być prowadzonym w sytuacjach intymnych?;Pikant
 pre005;Jak często pomagałeś w domu rodzeństwu?;Przeszłość;RZADKO;CZĘSTO
 swi001;Jak bardzo jesteś otwarty na inne religie i światopoglądy?;Światopoglądowe;W OGÓLE;BARDZO
 pik004;Czy często fantazjujesz o osobach, które znasz?;Pikantne;NIE;TAK
-pre006;Jak często zdarzało Ci się śpiewać lub tańczyć jako dziecko?;Przeszłość;RZADKO;CZĘSTO
 wol007;Wolisz czytać kryminały czy fantastykę?;Wolisz;KRYMINAŁY;FANTASTYKA
 swi003;Czy uważasz, że społeczeństwo powinno bardziej pomagać osobom potrzebującym?;Światopoglądowe;NIE;TAK
 wol008;Wolisz oglądać sport czy uprawiać sport?;Wolisz;OGLĄDAĆ;UPRAWIAĆ
@@ -149,7 +148,6 @@ swi027;Czy wierzysz, że każdy ma wpływ na swoją przyszłość?;Światopoglą
 pre028;Czy pamiętasz swój pierwszy dzień w szkole?;Przeszłość;NIE;TAK
 wol034;Wolisz czytać książki papierowe czy słuchać audiobooków?;Wolisz;PAPIEROWE KSIĄŻKI;AUDIOBOOKI
 fun022;Czy Twoje zwierzęta czasem patrzą na Ciebie, jakbyś był dziwny?;Śmieszne;NIE;TAK
-swi028;Czy uważasz, że sztuka ma realny wpływ na zmianę społeczną?;Światopoglądowe;NIE;TAK
 zwi020;Czy w związku czujesz się swobodnie mówiąc o swoich marzeniach?;Związkowe;NIE;TAK
 pik023;Czy cisza w zbliżeniu jest dla Ciebie bardziej zmysłowa niż słowa?;Pikantne;NIE;TAK
 zwi021;Czy potrafisz utrzymać relację na odległość?;Związkowe;NIE;TAK
@@ -164,7 +162,6 @@ zwi022;Czy ufasz swojej intuicji w relacjach?;Związkowe;NIE;TAK
 swi029;Czy wierzysz w karmę?;Światopoglądowe;NIE;TAK
 pre031;Często zdarzało Ci się być kapitanem drużyny lub grupy?;Przeszłość;NIE;TAK
 zwi023;Wolisz rozwiązywać konflikty od razu czy odkładać je na później?;Związkowe;OD RAZU;ODKŁADAĆ
-zwi024;Czy potrafisz przyznać się do błędu w relacji?;Związkowe;NIE;TAK
 swi030;Czy uważasz, że ludzie mają obowiązek pomagać obcym?;Światopoglądowe;NIE;TAK
 swi031;Czy uważasz, że wolność słowa powinna mieć ograniczenia?;Światopoglądowe;NIE;TAK
 fun025;Czy Twoje rozmowy w windzie trwają wieki, mimo że jadą dwa piętra?;Śmieszne;NIE;TAK
@@ -180,7 +177,6 @@ pre034;Czy pamiętasz swoje ulubione zabawy z dzieciństwa?;Przeszłość;NIE;TA
 swi033;Czy zgadzasz się z tym, że każdy człowiek powinien służyć społeczeństwu w jakiś sposób?;Światopoglądowe;NIE;TAK
 pre035;Czy miałeś problemy ze wstawaniem rano do szkoły?;Przeszłość;NIE;TAK
 dyl018;Wolisz spędzić tydzień w całkowitej ciszy czy w ciągłym hałasie?;Dylematy;CISZA;HAŁAS
-fun026;Czy zdarza Ci się śmiać z czegoś, czego nikt inny nie rozumie?;Śmieszne;NIE;TAK
 pik027;Czy potrafisz otwarcie mówić o swoich granicach w intymności?;Pikantne;NIE;TAK
 fun027;Czy Twoje ręce czasem same coś przewracają i patrzysz na nie z niedowierzaniem?;Śmieszne;NIE;TAK
 zwi026;Czy mówisz wprost, gdy coś Ci nie pasuje w relacji?;Związkowe;NIE;TAK
@@ -213,7 +209,6 @@ pre038;Czy brałeś udział w sportowych klubach szkolnychlub zajęciach dodatko
 pik030;Czy potrafisz wyczytać intencje z ciała drugiej osoby?;Pikantne;NIE;TAK
 dyl026;Wolisz zawsze zapominać twarze znajomych czy ich imiona?;Dylematy;TWARZE;IMIONA
 fun034;Czy potrafisz wyobrazić sobie życie bez kawy?;Śmieszne;NIE MA SZANS;NA LUZIE
-dyl027;Wolisz być bohaterem książki czy filmu?;Dylematy;KSIĄŻKI;FILMU
 swi039;Jak bardzo zgadzasz się z zasadą ‘oko za oko’?;Światopoglądowe;W OGÓLE;W PEŁNI
 zwi028;Czy lubisz dzielić się codziennymi szczegółami ze swoim partnerem?;Związkowe;NIE;TAK
 wol040;Wolisz wakacje w górach czy nad jeziorem?;Wolisz;GÓRY;JEZIORO
@@ -315,19 +310,16 @@ wol061;Wolisz jeść owoce czy warzywa?;Wolisz;OWOCE;WARZYWA
 zwi041;Czy lubisz wspólne gotowanie jako formę spędzania czasu?;Związkowe;NIE;TAK
 dyl037;Wolisz mieć w kieszeni zawsze 10 groszy czy 5 cukierków?;Dylematy;10 GROSZY;5 CUKIERKÓW
 swi055;Czy wierzysz w to, że ludzie są z natury dobrzy?;Światopoglądowe;NIE;TAK
-wol062;Wolisz prowadzić samochód czy podróżować pociągiem?;Wolisz;PROWADZIĆ SAMOCHÓD;JECHAĆ POCIĄGIEM
 luz038;Czy często śpiewasz w samochodzie?;Luźne;NIGDY;ZAWSZE
 fun057;Czy Twoje reakcje przypominają memy?;Śmieszne;NIE;TAK
 pik039;Czy gra w dominację i uległość Cię intryguje?;Pikantne;NIE;TAK
 luz039;Czy lubisz sprawdzać lodówkę bez zamiaru wyjmowania czegokolwiek?;Luźne;NIE;TAK
 dyl038;Wolisz mieć głos jak kaczka czy chodzić jak pingwin?;Dylematy;GŁOS JAK KACZKA;CHODZIĆ JAK PINGWIN
 pre054;Czy w dzieciństwie marzyłeś żeby być już dorosłym?;Przeszłość;NIE;TAK
-zwi042;Czy potrafisz rozmawiać o trudnych tematach bez emocji?;Związkowe;NIE;TAK
 zwi043;Czy Twoim zdaniem szczerość powinna być absolutna – nawet jeśli rani?;Związkowe;NIE;TAK
 zwi044;Czy ważne jest dla Ciebie poczucie humoru w związku?;Związkowe;NIE;TAK
 dyl039;Wolisz mieć umiejętność czytania książek w sekundę czy nauki nowych języków w godzinę?;Dylematy;CZYTANIE KSIĄŻEK;NAUKA JĘZYKÓW
 wol065;Wolisz książkę czy film?;Wolisz;KSIĄŻKA;FILM
-wol066;Wolisz poranki czy wieczory?;Wolisz;PORANKI;WIECZORY
 dyl040;Wolisz mieć nieskończoną ilość baterii w telefonie czy darmowy dostęp do internetu gdziekolwiek?;Dylematy;BATERIA;INTERNET
 swi056;Czy uważasz, że każdy człowiek powinien mieć dostęp do opieki zdrowotnej bez względu na zarobki?;Światopoglądowe;NIE;TAK
 dyl041;Wolałbyś żyć w świecie bez kolorów czy bez dźwięków?;Dylematy;BEZ KOLORÓW;BEZ DZWIĘKÓW
@@ -381,7 +373,6 @@ pik051;Co ma dla Ciebie większe znaczenie w intymności - dotyk czy słowa?;Pik
 dyl044;Wolisz mieć super moc teleportacji, ale tylko do łazienki, czy umieć latać, ale tylko na 1 metr?;Dylematy;TELEPORTACJA;LATANIE
 swi067;Czy uważasz, że powinno się ograniczać sztuczną inteligencję w codziennym życiu?;Światopoglądowe;NIE;TAK
 zwi054;Czy wspólne poczucie humoru jest dla Ciebie ważne?;Związkowe;NIE;TAK
-pre059;Czy często ukrywałeś słodycze przed rodzicami?;Przeszłość;NIE;TAK
 zwi055;Wolisz rozmawiać o emocjach czy działać praktycznie?;Związkowe;ROZMAWIAĆ;DZIAŁAĆ
 swi068;Czy zgadzasz się z tym, że praca powinna być gwarantowana przez państwo?;Światopoglądowe;NIE;TAK
 fun065;Czy zdarza Ci się tak mocno skupić na grze, że zapominasz o całym świecie?;Śmieszne;NIE;TAK
@@ -422,7 +413,6 @@ dyl051;Wolałbyś przez cały dzień mówić szeptem czy krzyczeć?;Dylematy;MÓ
 luz052;Czy myślisz, że poradziłbyś sobie w średniowieczu?;Luźne;NIE;TAK
 swi076;Czy uważasz, że jednostka może zmieniać świat?;Światopoglądowe;NIE;TAK
 luz053;Zdarza Ci się zgubić w miejscu, które dobrze znasz?;Luźne;RZADKO;CZĘSTO
-luz054;Czy jesteś w stanie wstać rano bez włączania 5 drzemek?;Luźne;NIE;TAK
 zwi060;Jak często potrzebujesz zapewnień o uczuciach?;Związkowe;RZADKO;CZĘSTO
 wol077;Wolisz mieszkać blisko centrum miasta czy na jego obrzeżach?;Wolisz;CENTRUM;OBRZEŻA
 wol078;Wolisz oglądać filmy z napisami czy z lektorem?;Wolisz;NAPISY;LEKTOR
