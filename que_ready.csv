@@ -1,8 +1,6 @@
 id;text;category;left;right
 imp001;Kto według Ciebie mógłby wypić więcej?;Imprezowe;OSOBA PO LEWO;OSOBA PO PRAWO
 imp002;Jaki drink wolisz - Mohito czy Sex On The Beach?;Imprezowe;MOHITO;SEX ON THE BEACH
-imp003;Wolisz pić piwo, czy drinki?;Imprezowe;PIWO;DRINKI
-imp004;Jakiej marki piwo wolisz - Tyskie czy Żywiec?;Imprezowe;TYSKIE;ŻYWIEC
 imp005;Czy uważasz, że masz mocną głowę?;Imprezowe;NIE;TAK
 imp006;Czy myślisz, że mógłbyś przepić osobę po twojej lewej stronie?;Imprezowe;NIE;TAK
 imp007;Wolisz imprezy w domu czy w klubie?;Imprezowe;DOM;KLUB
@@ -18,14 +16,11 @@ imp016;Czy lubisz imprezy tematyczne?;Imprezowe;NIE;TAK
 imp017;Wolisz tańczyć przy muzyce elektronicznej czy disco?;Imprezowe;ELEKTRONICZNA;DISCO
 imp018;Kto w grupie najchętniej opowiada zabawne historie?;Imprezowe;OSOBA PO LEWO;OSOBA PO PRAWO
 imp019;Wolisz shotsy czy drinki długie?;Imprezowe;SHOTS;DRINKI DŁUGIE
-imp020;Czy uważasz, że jesteś duszą towarzystwa?;Imprezowe;NIE;TAK
 imp021;Kto według Ciebie najlepiej radzi sobie z alkoholem?;Imprezowe;OSOBA PO LEWO;OSOBA PO PRAWO
 imp022;Wolisz pić whisky czy wódkę?;Imprezowe;WHISKY;WÓDKA
 imp023;Czy brałeś udział w konkursie picia shotów?;Imprezowe;NIE;TAK
 imp024;Kto w grupie najczęściej zaczyna tańczyć?;Imprezowe;OSOBA PO LEWO;OSOBA PO PRAWO
 imp025;Wolisz imprezy duże czy kameralne?;Imprezowe;DUŻE;KAMERALNE
-imp026;Czy uważasz, że masz dobrą pamięć po alkoholu?;Imprezowe;NIE;TAK
-imp027;Kto według Ciebie najlepiej opanowuje gry imprezowe?;Imprezowe;OSOBA PO LEWO;OSOBA PO PRAWO
 imp028;Wolisz koktajle owocowe czy klasyczne?;Imprezowe;OWOCOWE;KLASYCZNE
 imp029;Czy lubisz imprezy z DJ-em?;Imprezowe;NIE;TAK
 imp030;Kto w grupie najczęściej rozkręca zabawę?;Imprezowe;OSOBA PO LEWO;OSOBA PO PRAWO
@@ -46,11 +41,8 @@ imp044;Czy uważasz, że masz talent do mieszania drinków?;Imprezowe;NIE;TAK
 imp045;Kto według Ciebie najlepiej tańczy przy szybkiej muzyce?;Imprezowe;OSOBA PO LEWO;OSOBA PO PRAWO
 imp046;Wolisz shoty owocowe czy klasyczne?;Imprezowe;OWOCOWE;KLASYCZNE
 imp047;Czy zdarza Ci się zapomnieć, ile drinków wypiłeś?;Imprezowe;NIE;TAK
-imp048;Kto w grupie najczęściej proponuje zabawy integracyjne?;Imprezowe;OSOBA PO LEWO;OSOBA PO PRAWO
 imp049;Wolisz imprezy z muzyką na żywo czy z playlistą?;Imprezowe;NA ŻYWO;PLAYLISTA
 imp050;Czy lubisz imprezy spontaniczne?;Imprezowe;NIE;TAK
-imp051;Kto według Ciebie potrafi najlepiej prowadzić karaoke?;Imprezowe;OSOBA PO LEWO;OSOBA PO PRAWO
-imp052;Wolisz grać w beer pong czy w karty?;Imprezowe;BEER PONG;KARTY
 imp053;Czy zdarza Ci się tańczyć na stole?;Imprezowe;NIE;TAK
 imp054;Kto w grupie najczęściej inicjuje toast z alkoholem?;Imprezowe;OSOBA PO LEWO;OSOBA PO PRAWO
 imp055;Wolisz piwo jasne czy ciemne?;Imprezowe;JASNE;CIEMNE
@@ -58,7 +50,6 @@ imp056;Czy lubisz gry polegające na pijaniu w grupie?;Imprezowe;NIE;TAK
 imp057;Kto według Ciebie najczęściej gubi kieliszki?;Imprezowe;OSOBA PO LEWO;OSOBA PO PRAWO
 imp058;Wolisz muzykę taneczną czy hip-hop?;Imprezowe;TANECZNĄ;HIP-HOP
 imp059;Czy brałeś udział w zabawie w „prawda czy wyzwanie”?;Imprezowe;NIE;TAK
-imp060;Kto w grupie najczęściej wygrywa w gry imprezowe?;Imprezowe;OSOBA PO LEWO;OSOBA PO PRAWO
 imp061;Kto według Ciebie pierwszy skończy drinka?;Imprezowe;OSOBA PO LEWO;OSOBA PO PRAWO
 imp062;Wolisz drinka z rumu czy z wódki?;Imprezowe;RUM;WÓDKA
 imp063;Jakie piwo wolisz - Lech czy Okocim?;Imprezowe;LECH;OKOCIM
@@ -89,7 +80,6 @@ imp087;Jakie piwo wolisz - Heineken czy Carlsberg?;Imprezowe;HEINEKEN;CARLSBERG
 imp088;Kto w grupie najczęściej kończy swoją porcję drinka pierwszy?;Imprezowe;OSOBA PO LEWO;OSOBA PO PRAWO
 imp089;Wolisz shoty owocowe czy alkoholowe klasyki?;Imprezowe;OWOCOWE;KLASYCZNE
 imp090;Czy zdarza Ci się przetańczyć całą noc?;Imprezowe;NIE;TAK
-imp091;Kto według Ciebie najczęściej wpadnie na śmieszny pomysł podczas imprezy?;Imprezowe;OSOBA PO LEWO;OSOBA PO PRAWO
 imp092;Wolisz drinki z rumem czy z tequilą?;Imprezowe;RUM;TEQUILA
 imp093;Jaką markę wódki wolisz - Finlandia czy Sobieski?;Imprezowe;FINLANDIA;SOBIESKI
 imp094;Kto w grupie najczęściej zapomina kolejki w grze?;Imprezowe;OSOBA PO LEWO;OSOBA PO PRAWO
@@ -97,23 +87,18 @@ imp095;Wolisz imprezy z DJ-em czy z playlistą?;Imprezowe;DJ;PLAYLISTA
 imp096;Czy zdarza Ci się brać udział w konkursach picia?;Imprezowe;NIE;TAK
 imp097;Kto według Ciebie najlepiej prowadzi karaoke?;Imprezowe;OSOBA PO LEWO;OSOBA PO PRAWO
 imp098;Wolisz drinki na bazie ginu czy wódki?;Imprezowe;GIN;WÓDKA
-imp099;Jakie piwo wolisz - Okocim czy Żywiec?;Imprezowe;OKOCIM;ŻYWIEC
 imp100;Kto w grupie najczęściej zaczyna tańczyć przy muzyce elektronicznej?;Imprezowe;OSOBA PO LEWO;OSOBA PO PRAWO
 imp101;Wolisz shoty klasyczne czy z dodatkiem owoców?;Imprezowe;KLASYCZNE;Z DODATKIEM OWOCÓW
 imp102;Czy potrafisz pić z umiarem, gdy reszta imprezy szaleje?;Imprezowe;NIE;TAK
 imp103;Kto według Ciebie najczęściej wstaje do baru po drinka?;Imprezowe;OSOBA PO LEWO;OSOBA PO PRAWO
-imp104;Wolisz piwo z puszki czy z butelki?;Imprezowe;Z PUSZKI;Z BUTELKI
 imp105;Jaką markę wódki wolisz - Absolut czy Belvedere?;Imprezowe;ABSOLUT;BELVEDERE
 imp106;Kto w grupie najczęściej proponuje nowe gry imprezowe?;Imprezowe;OSOBA PO LEWO;OSOBA PO PRAWO
-imp107;Wolisz drinki mocne czy słabe?;Imprezowe;MOCNE;SŁABE
 imp108;Czy zdarza Ci się przebrać na imprezę tematyczną?;Imprezowe;NIE;TAK
 imp109;Kto według Ciebie najczęściej opowiada dowcipy podczas imprezy?;Imprezowe;OSOBA PO LEWO;OSOBA PO PRAWO
 imp110;Wolisz imprezy spontaniczne czy zaplanowane?;Imprezowe;SPONTANICZNE;ZAPLANOWANE
 imp111;Kto według Ciebie szybciej zgubi klucze po imprezie?;Imprezowe;OSOBA PO LEWO;OSOBA PO PRAWO
-imp112;Wolisz drinki z wódką czy z whisky?;Imprezowe;WÓDKA;WHISKY
 imp113;Jakie piwo wolisz - Corona czy Desperados?;Imprezowe;CORONA;DESPERADOS
 imp114;Kto w grupie najczęściej zaczyna tańczyć pierwszy?;Imprezowe;OSOBA PO LEWO;OSOBA PO PRAWO
-imp115;Wolisz koktajle owocowe czy z dodatkiem alkoholu mocnego?;Imprezowe;OWOCOWE;MOCNY ALKOHOL
 imp116;Czy potrafisz imprezować do białego rana?;Imprezowe;NIE;TAK
 imp117;Kto według Ciebie najczęściej zapomina o zamówionych drinkach?;Imprezowe;OSOBA PO LEWO;OSOBA PO PRAWO
 imp118;Wolisz piwo jasne czy ciemne?;Imprezowe;JASNE;CIEMNE
@@ -124,13 +109,10 @@ imp122;Czy zdarza Ci się wziąć udział w konkursie picia?;Imprezowe;NIE;TAK
 imp123;Kto według Ciebie najczęściej tańczy solo na parkiecie?;Imprezowe;OSOBA PO LEWO;OSOBA PO PRAWO
 imp124;Wolisz drinki słodkie czy gorzkie?;Imprezowe;SŁODKIE;GORZKIE
 imp125;Czy zdarza Ci się palić jointa na imprezie?;Imprezowe;NIE;TAK
-imp126;Kto w grupie najczęściej proponuje eksperymentalne drinki?;Imprezowe;OSOBA PO LEWO;OSOBA PO PRAWO
-imp127;Wolisz imprezy w klubie czy w domu znajomych?;Imprezowe;W KLUBIE;W DOMU
 imp128;Jakie piwo wolisz - Perła czy Żywiec?;Imprezowe;PERŁA;ŻYWIEC
 imp129;Kto według Ciebie najczęściej kończy kieliszek pierwszy?;Imprezowe;OSOBA PO LEWO;OSOBA PO PRAWO
 imp130;Wolisz shoty mocne czy łagodne?;Imprezowe;MOCNE;ŁAGODNE
 imp131;Czy potrafisz zrobić drinka lepiej niż barman?;Imprezowe;NIE;TAK
-imp132;Kto w grupie najczęściej zgubi telefon podczas imprezy?;Imprezowe;OSOBA PO LEWO;OSOBA PO PRAWO
 imp133;Wolisz piwo w puszce czy w butelce?;Imprezowe;PUSZKA;BUTELKA
 imp134;Jaką markę wódki wolisz - Sobieski czy Belvedere?;Imprezowe;SOBIESKI;BELVEDERE
 imp135;Kto według Ciebie najczęściej śpiewa przy karaoke?;Imprezowe;OSOBA PO LEWO;OSOBA PO PRAWO
@@ -143,7 +125,6 @@ imp141;Kto według Ciebie najczęściej podnosi toast?;Imprezowe;OSOBA PO LEWO;O
 imp142;Wolisz shoty owocowe czy klasyczne wódki?;Imprezowe;OWOCOWE;KLASYCZNE
 imp143;Czy potrafisz imprezować przez całą noc bez zmęczenia?;Imprezowe;NIE;TAK
 imp144;Kto w grupie najczęściej zaczyna żartować o alkoholu?;Imprezowe;OSOBA PO LEWO;OSOBA PO PRAWO
-imp145;Wolisz drinki lekkie czy mocne?;Imprezowe;LEKKIE;MOCNE
 imp146;Czy zdarza Ci się wziąć udział w przyjęciu tematycznym z alkoholem?;Imprezowe;NIE;TAK
 imp147;Kto według Ciebie najczęściej pali marihuanę podczas imprezy?;Imprezowe;OSOBA PO LEWO;OSOBA PO PRAWO
 imp148;Wolisz koktajle z rumem czy z ginem?;Imprezowe;RUM;GIN
@@ -161,7 +142,6 @@ imp159;Kto według Ciebie najczęściej zabawia gości na imprezie?;Imprezowe;OS
 imp160;Wolisz drinki klasyczne czy zaskakujące smaki?;Imprezowe;KLASYCZNE;ZASKAKUJĄCE
 imp161;Kto według Ciebie zrobi najlepsze selfie na imprezie?;Imprezowe;OSOBA PO LEWO;OSOBA PO PRAWO
 imp162;Wolisz imprezę w klubie czy na plaży?;Imprezowe;KLUB;PLAŻA
-imp163;Kto w grupie najczęściej zaczyna karaoke?;Imprezowe;OSOBA PO LEWO;OSOBA PO PRAWO
 imp164;Wolisz przekąski słone czy słodkie na imprezie?;Imprezowe;SŁONE;SŁODKIE
 imp165;Jaką muzykę wolisz na imprezie - house czy disco?;Imprezowe;HOUSE;DISCO
 imp166;Czy potrafisz wytrzymać imprezę bez telefonu?;Imprezowe;NIE;TAK
@@ -177,12 +157,9 @@ imp175;Jakie piwo wolisz - Warka czy Lech?;Imprezowe;WARKA;LECH
 imp176;Kto w grupie najczęściej kończy toast?;Imprezowe;OSOBA PO LEWO;OSOBA PO PRAWO
 imp177;Wolisz shoty owocowe czy klasyczne wódki?;Imprezowe;OWOCOWE;KLASYCZNE
 imp178;Czy potrafisz zorganizować spontaniczną imprezę w jeden dzień?;Imprezowe;NIE;TAK
-imp179;Kto według Ciebie najbardziej lubi eksperymentować z drinkami?;Imprezowe;OSOBA PO LEWO;OSOBA PO PRAWO
 imp180;Wolisz muzykę głośną czy tło spokojne podczas imprezy?;Imprezowe;GŁOŚNA;SPOKOJNE TŁO
-imp181;Jaką markę wódki wolisz - Absolut czy Wyborowa?;Imprezowe;ABSOLUT;WYBOROWA
 imp182;Kto w grupie najczęściej śpiewa podczas karaoke?;Imprezowe;OSOBA PO LEWO;OSOBA PO PRAWO
 imp183;Wolisz drinki słodkie czy kwaśne?;Imprezowe;SŁODKIE;KWAŚNE
-imp184;Czy zdarza Ci się palić jointa podczas chilloutu po imprezie?;Imprezowe;NIE;TAK
 imp185;Kto według Ciebie najczęściej kończy drinka z uśmiechem?;Imprezowe;OSOBA PO LEWO;OSOBA PO PRAWO
 imp186;Wolisz przekąski z serem czy mięsem?;Imprezowe;SER;MIĘSO
 imp187;Jaką muzykę wolisz na afterparty - hip-hop czy pop?;Imprezowe;HIP-HOP;POP
@@ -190,7 +167,6 @@ imp188;Kto w grupie najczęściej opowiada zabawne historie?;Imprezowe;OSOBA PO 
 imp189;Wolisz drinki lekkie czy mocne?;Imprezowe;LEKKIE;MOCNE
 imp190;Czy zdarza Ci się brać udział w konkursie tańca na imprezie?;Imprezowe;NIE;TAK
 imp191;Kto według Ciebie najbardziej lubi eksperymentować z alkoholem?;Imprezowe;OSOBA PO LEWO;OSOBA PO PRAWO
-imp192;Wolisz imprezy w domu czy w klubie?;Imprezowe;DOM;KLUB
 imp193;Jakie piwo wolisz - Heineken czy Żywiec?;Imprezowe;HEINEKEN;ŻYWIEC
 imp194;Kto w grupie najczęściej podnosi toast podczas imprezy?;Imprezowe;OSOBA PO LEWO;OSOBA PO PRAWO
 imp195;Wolisz shoty z owocami czy klasyczne wódki?;Imprezowe;Z OWOCAMI;KLASYCZNE
@@ -204,11 +180,9 @@ imp202;Jaką muzykę wolisz na imprezie - rock czy pop?;Imprezowe;ROCK;POP
 imp203;Kto według Ciebie najczęściej zabawia gości na imprezie?;Imprezowe;OSOBA PO LEWO;OSOBA PO PRAWO
 imp204;Wolisz drinki owocowe czy klasyczne?;Imprezowe;OWOCOWE;KLASYCZNE
 imp205;Czy potrafisz bawić się na imprezie do rana?;Imprezowe;NIE;TAK
-imp206;Kto w grupie najczęściej zaprasza do tańca?;Imprezowe;OSOBA PO LEWO;OSOBA PO PRAWO
 imp207;Wolisz piwo jasne czy ciemne?;Imprezowe;JASNE;CIEMNE
 imp208;Czy zdarza Ci się palić jointa w małym gronie?;Imprezowe;NIE;TAK
 imp209;Kto według Ciebie najlepiej tańczy po alkoholu?;Imprezowe;OSOBA PO LEWO;OSOBA PO PRAWO
-imp210;Wolisz imprezy z DJ-em czy z playlistą znajomych?;Imprezowe;DJ;PLAYLISTA
 imp211;Jakie piwo wolisz - Desperados czy Corona?;Imprezowe;DESPERADOS;CORONA
 imp212;Kto w grupie najczęściej robi toast?;Imprezowe;OSOBA PO LEWO;OSOBA PO PRAWO
 imp213;Wolisz drinki mocne czy lekkie?;Imprezowe;MOCNE;LEKKIE
