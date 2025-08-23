@@ -5,19 +5,6 @@ import os
 import requests
 import base64
 
-def new_id(old_id):
-    mapping = {
-        "fun": "fun",
-        "swi": "swi",
-        "zw": "zwi",
-        "pk": "pik",
-        "lz": "luz",
-        "ps": "pre",
-        "wol": "wol",
-        "dyl": "dyl"
-    }
-    return mapping.get(old_id, old_id)
-
 def save_row(row, file_path):
     file_exists = os.path.exists(file_path)
     with open(file_path, "a", encoding="utf-8", newline="") as f:
@@ -58,11 +45,7 @@ if "step" not in st.session_state:
 if st.session_state.step == "start":
     st.title("📋 Walidacja pytań")
 
-    if st.button("➕ Dodawanie nowych pytań"):
-        st.session_state.step = "new_que_edit"
-        st.rerun()
-
-    if st.button("✅ Walidacja pytań gotowych"):
+    if st.button("✅ Walidacja pytań"):
         st.session_state.step = "ready_val"
         st.rerun()
     
@@ -70,16 +53,19 @@ if st.session_state.step == "start":
         st.session_state.step = "edit_que_to_edit"
         st.rerun()
 
+    if st.button("👀 Podgląd pytań"):
+        st.session_state.step = "show_que"
+        st.rerun()
+
     df_ready = pd.read_csv("que_ready.csv", sep=";")
     df_accepted = pd.read_csv("que_accepted.csv", sep=";")
     df_to_edit = pd.read_csv("que_to_edit.csv", sep=";")
-    df_new = pd.read_csv('que_new.csv', sep=';')
     
-    st.markdown(f"✅: {len(df_accepted)} | ❓: {len(df_ready)} | ✍️: {len(df_to_edit)} | 🆕: {len(df_new)}")
+    st.markdown(f"✅: {len(df_accepted)} | ❓: {len(df_ready)} | ✍️: {len(df_to_edit)}")
 
 # --- WALIDACJA PYTAŃ GOTOWYCH ---
 elif st.session_state.step == "ready_val":
-    st.subheader("✅ Walidacja pytań gotowych")
+    st.subheader("✅ Walidacja pytań")
 
     # przycisk upload do GitHuba
     if st.button("💾 Zapisz na GitHub"):
@@ -105,6 +91,9 @@ elif st.session_state.step == "ready_val":
                         st.error(f"❌ Błąd zapisu {file_path}: {res.status_code} – {res.text}")
         else:
             st.warning("⚠️ Brak tokenu GITHUB_TOKEN w Secrets Streamlit.")
+    if st.button("➕ Dodaj nowe pytania"):
+        st.session_state.step = "new_que"
+        st.rerun()
 
     df_ready = pd.read_csv("que_ready.csv", sep=";")
     df_accepted = pd.read_csv("que_accepted.csv", sep=";")
@@ -159,93 +148,7 @@ elif st.session_state.step == "ready_val":
         st.session_state.step = "start"
         st.rerun()
 
-
 # --- DODAWANIE NOWYCH PYTAŃ ---
-elif st.session_state.step == "new_que_edit":
-    st.subheader("➕ Dodawanie nowych pytań")
-
-    # przycisk upload do GitHuba
-    if st.button("💾 Zapisz na GitHub"):
-        repo = "DawidS25/walidacja_pytan"
-        files = {
-            "que_new.csv": "que_new.csv",
-            "que_ready.csv": "que_ready.csv"
-        }
-        commit_message = "Aktualizacja pytań przez Streamlit"
-        try:
-            token = st.secrets["GITHUB_TOKEN"]
-        except Exception:
-            token = None
-
-        if token:
-            for file_path, path_in_repo in files.items():
-                if os.path.exists(file_path):
-                    res = upload_to_github(file_path, repo, path_in_repo, token, commit_message)
-                    if res.status_code in (200, 201):
-                        st.success(f"✅ Plik {file_path} został zapisany na GitHub!")
-                    else:
-                        st.error(f"❌ Błąd zapisu {file_path}: {res.status_code} – {res.text}")
-        else:
-            st.warning("⚠️ Brak tokenu GITHUB_TOKEN w Secrets Streamlit.")
-            
-    if st.button("➕ Dodaj nowe pytania"):
-        st.session_state.step = "new_que"
-        st.rerun()
-
-    df_to_val = pd.read_csv('que_new.csv', sep=';')
-
-    if len(df_to_val) <= 0:
-        st.info(f"🎉 Wszystkie pytania zostały już zwalidowane! {len(df_new_ready)} nowych pytań!") 
-        if st.button("↩️ Powrót"):
-            st.session_state.step = "start"
-            st.rerun()
-        st.stop()
-    else:
-        if "row" not in st.session_state:
-            st.session_state.row = df_to_val.iloc[0].tolist()
-    st.markdown(f"Pozostało {len(df_to_val)} pytań.")
-    row = st.session_state.row
-    row[0] = new_id("".join([c for c in row[0] if c.isalpha()]))
-    st.text_input(f"🆔 ID: ", value=row[0], key = "ID")
-    st.text_input("📚 Kategoria:", value=row[2], key="category")
-    st.text_input("❓ Pytanie:", value=row[1], key="question")
-    st.text_input("⬅️ Lewo:", value=row[3], key="left")
-    st.text_input("➡️ Prawo:", value=row[4], key="right")
-
-    if st.button("💾 Zatwierdź zmiany"):
-        edited_row = [
-            st.session_state.ID.strip(),
-            st.session_state.question,
-            st.session_state.category.strip(),
-            st.session_state.left,
-            st.session_state.right
-        ]
-        row_to_import = [
-            f"{edited_row[0]}000",
-            edited_row[1],
-            edited_row[2],
-            edited_row[3],
-            edited_row[4]
-        ]
-        save_row(row_to_import, "que_ready.csv")
-        df_to_val = df_to_val.drop(df_to_val.index[0])
-        df_to_val.to_csv('que_new.csv', index=False, sep=';')            
-        del st.session_state.row
-        st.rerun()
-
-    if st.button("❌ Odrzuć pytanie"):
-        df_to_val = df_to_val.drop(df_to_val.index[0])
-        df_to_val.to_csv('que_new.csv', index=False, sep=';')
-        del st.session_state.row
-        st.rerun()
-
-    if st.button("↩️ Powrót"):
-        if "row" in st.session_state:
-            del st.session_state.row
-        st.session_state.step = "start"
-        st.rerun()
-
-
 elif st.session_state.step == "new_que":
     st.text_area(
         "Wprowadź nowe pytania do walidacji w postaci .csv",
@@ -253,11 +156,11 @@ elif st.session_state.step == "new_que":
         key = "new_que"
     )
     if st.button("💾 Dopisz te pytania do pliku CSV"):
-        with open("que_new.csv", "a", encoding="utf-8") as f:
+        with open("que_ready.csv", "a", encoding="utf-8") as f:
             f.write("\n" + st.session_state.new_que.strip())
-        st.success("✅ Plik que_new.csv został zapisany lokalnie!")
+        st.success("✅ Plik que_ready.csv został zapisany lokalnie!")
     if st.button("↩️ Powrót"):
-        st.session_state.step = "new_que_edit"
+        st.session_state.step = "ready_val"
         st.rerun()
 
 # --- EDYCJA PYTAŃ Z que_to_edit ---
@@ -364,3 +267,76 @@ elif st.session_state.step == "que_to_edit_val":
         if st.button("↩️ Powrót do edycji"):
             st.session_state.step = "edit_que_to_edit"
             st.rerun()
+
+elif st.session_state.step == "show_que":
+    st.markdown(f"## 👀 Podgląd pytań")
+    if "step_show" not in st.session_state:
+        st.session_state.step_show = None
+    if st.button("🔍 Do sprawdzenia"):
+        st.session_state.step_show = "ready"
+        st.rerun()
+    if st.button("✅ Zaakceptowane"):
+        st.session_state.step_show = "accepted"
+        st.rerun()
+    if st.button("✍️ Do zmiany"):
+        st.session_state.step_show = "to_edit"
+        st.rerun()
+
+    file_map = {
+        "ready": "que_ready.csv",
+        "accepted": "que_accepted.csv",
+        "to_edit": "que_to_edit.csv"
+    }
+
+    if st.session_state.step_show in file_map:
+        file_path = file_map[st.session_state.step_show]
+        df = pd.read_csv(file_path, sep=";")
+        st.markdown(f"### 📄 {file_path}")
+        edited_df = st.data_editor(df, num_rows="dynamic", use_container_width=True)
+        if st.button("🔢 Segreguj pytania po ID"):
+            # Wyciągamy prefix literowy z ID
+            prefix = df["id"].str.extract(r"^([A-Za-z]+)")[0].str.lower()
+
+            # Tworzymy kopię df i numerujemy w kolejności pojawiania się w df
+            df = df.copy()
+            df["id"] = prefix + (prefix.groupby(prefix).cumcount() + 1).astype(str).str.zfill(3)
+
+            # Nadpisujemy edited_df, żeby zmiany były widoczne w data_editor
+            edited_df[:] = df
+
+            # Zapis do pliku
+            df.to_csv(file_path, sep=";", index=False)
+            st.success(f"✅ Posegregowano i ponumerowano ID w formacie AAA000 od 001 dla każdego prefixu")
+            st.rerun()
+       
+        if st.button("💾 Zapisz zmiany w pliku CSV"):
+            edited_df.to_csv(file_path, sep=";", index=False)
+            st.success(f"✅ Zapisano zmiany w {file_path}")
+        if st.button("💾 Zapisz na GitHub"):
+            repo = "DawidS25/walidacja_pytan"
+            files = {
+                "que_ready.csv": "que_ready.csv",
+                "que_accepted.csv": "que_accepted.csv",
+                "que_to_edit.csv": "que_to_edit.csv"
+            }
+            commit_message = "Aktualizacja pytań przez Streamlit"
+            try:
+                token = st.secrets["GITHUB_TOKEN"]
+            except Exception:
+                token = None
+
+            if token:
+                for file_path, path_in_repo in files.items():
+                    if os.path.exists(file_path):
+                        res = upload_to_github(file_path, repo, path_in_repo, token, commit_message)
+                        if res.status_code in (200, 201):
+                            st.success(f"✅ Plik {file_path} został zapisany na GitHub!")
+                        else:
+                            st.error(f"❌ Błąd zapisu {file_path}: {res.status_code} – {res.text}")
+            else:
+                st.warning("⚠️ Brak tokenu GITHUB_TOKEN w Secrets Streamlit.")
+    if st.button("↩️ Powrót"):
+        st.session_state.step = "start"
+        if "step_show" in st.session_state:
+            del st.session_state.step_show
+        st.rerun()
