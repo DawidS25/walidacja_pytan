@@ -37,6 +37,13 @@ def upload_to_github(file_path, repo, path_in_repo, token, commit_message):
     response = requests.put(url, headers=headers, json=data)
     return response
 
+def id_for_category(category):
+    df = pd.read_csv("que_accepted.csv", sep=";")
+    df_category = df[df["category"] == category]
+    id = df_category.iloc[0]["id"]
+    id_prefix = ''.join(filter(str.isalpha, id))
+    return id_prefix + "999"
+
 
 # --- START ---
 if "step" not in st.session_state:
@@ -150,15 +157,67 @@ elif st.session_state.step == "ready_val":
 
 # --- DODAWANIE NOWYCH PYTAŃ ---
 elif st.session_state.step == "new_que":
+    categories = pd.read_csv("que_accepted.csv", sep=";")["category"].unique().tolist()
+    st.subheader("➕ Dodaj pojedyncze pytanie")
+
+    # Inicjalizacja w session_state
+    if "new_category" not in st.session_state:
+        st.session_state.new_category = categories[0]
+    if "new_id" not in st.session_state:
+        st.session_state.new_id = id_for_category(st.session_state.new_category)
+
+    # Selectbox aktualizuje session_state
+    new_category = st.selectbox(
+        "📚 Kategoria", categories, index=categories.index(st.session_state.new_category)
+    )
+
+    # Jeśli zmieni się wybór kategorii, aktualizujemy ID
+    if new_category != st.session_state.new_category:
+        st.session_state.new_category = new_category
+        st.session_state.new_id = id_for_category(new_category)
+        st.rerun()
+
+    with st.form("add_single_question"):
+        st.text_input(
+            "🆔 ID (generowane automatycznie)",
+            value=st.session_state.new_id,
+            disabled=True,
+            key="displayed_id"
+        )
+        new_question = st.text_area("❓ Treść pytania")
+        new_left = st.text_input("⬅️ Odpowiedź lewa")
+        new_right = st.text_input("➡️ Odpowiedź prawa")
+        submitted = st.form_submit_button("💾 Dodaj pytanie")
+
+        if submitted:
+            if all([st.session_state.new_id.strip(), st.session_state.new_category.strip(),
+                    new_question.strip(), new_left.strip(), new_right.strip()]):
+                row = [
+                    st.session_state.new_id.strip(),
+                    new_question.strip(),
+                    st.session_state.new_category.strip(),
+                    new_left.strip(),
+                    new_right.strip()
+                ]
+                save_row(row, "que_ready.csv")
+                st.success("✅ Pytanie zostało dodane do que_ready.csv!")
+            else:
+                st.warning("⚠️ Uzupełnij wszystkie pola.")
+
+    st.markdown("---")
+    st.subheader("Lub wklej wiele pytań w formacie CSV")
     st.text_area(
         "Wprowadź nowe pytania do walidacji w postaci .csv",
         value = "",
         key = "new_que"
     )
     if st.button("💾 Dopisz te pytania do pliku CSV"):
-        with open("que_ready.csv", "a", encoding="utf-8") as f:
-            f.write("\n" + st.session_state.new_que.strip())
-        st.success("✅ Plik que_ready.csv został zapisany lokalnie!")
+        if st.session_state.new_que.strip():
+            with open("que_ready.csv", "a", encoding="utf-8") as f:
+                f.write("\n" + st.session_state.new_que.strip())
+            st.success("✅ Plik que_ready.csv został zapisany lokalnie!")
+        else:
+            st.warning("⚠️ Pole tekstowe jest puste.")
     if st.button("↩️ Powrót"):
         st.session_state.step = "ready_val"
         st.rerun()
